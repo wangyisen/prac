@@ -1,0 +1,117 @@
+.container{
+	width: 1179px;
+	height: 1167px;
+	margin: 20px 390px 0 390px;
+}
+.container .left{
+	float: left;
+	width: 860px;
+	height: 1168px;
+}
+.container .left .book{
+	height: 416px;
+	border: 1px solid #d2d2d2;
+/*	margin: 20px;	*/
+	margin-bottom: 20px;
+}
+.container .left .book .carousel{
+	float: left;	
+	height: 416px;
+	width: 570px;
+	border-right: 1px solid #d2d2d2; 
+}
+.container .left .book .unscramble{
+	float: left;
+	width: 248px;
+	height: 379px;
+	padding: 20px 10px 15px 17px;
+}
+.container .left .course{
+	margin: 20px 0 20px 0;
+	width: 860px;
+	height: 435px;
+	border: 1px solid #d2d2d2;
+}
+.container .left .course .item{
+	float: left;
+	width: 250px;
+	height: 405px;
+	border: 1px solid #d2d2d2;
+	padding: 20px 17px 10px 17px;
+}
+.container .left .course .item select{
+	border: 3px solid #ffffff;
+	width: 125px;
+	height: 25px;
+	background-color:#3d45ab;
+	font-style: 
+}
+.container .left .course .item:first-child{
+	background-color: #3d45ab;
+}
+
+.container .left .editor{
+	padding: 20px;
+	margin: 20px 0 20px 0;
+	width: 820px;
+	height: 235px;
+	border: 1px solid #d2d2d2; 
+}
+.container .left .editor .item1{
+	height: 235px;
+	width: 200px;
+	border-right: 1px solid #d2d2d2;
+}
+.container .left .editor .item2{
+	height: 235px;
+	width: 200px;
+}
+.container .right{
+	float: right;
+	width: 300px;
+	height: 1170px;
+	border: 1px solid #d2d2d2;
+}
+.container .right .notice{
+	height: 620px;
+}
+.container .right .notice .title{
+	height: 20px;
+	padding: 10px 10px 10px 20px;
+	border-bottom: 1px solid #d2d2d2; 
+	font:  24px arial,sans-serif;
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu
+}
+.container .right .notice .content{
+	height: 540px;
+	padding: 20px;
+	border-bottom: 1px solid #d2d2d2;	
+}
+.container .right .notice img{
+	height: 170px;
+	width: 260px;
+	margin-bottom: 15px;
+}
+.container .right .report{
+	height: 550px;
+}
+.container .right .report .title{
+	height: 20px;
+	padding: 10px 10px 10px 20px;
+	border-top: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d2d2d2;  
+	font: bold 24px arial,sans-serif;
+}
+.container .right .report .content{
+	height: 507px;
+	padding: 0 15px 0 15px;	
+}
+.container .right .report .content ul{
+		list-style:none;
+}
+.container .right .report .content ul li{
+	height: 50px;
+}
+.container .right .report .content ul li + li{
+	border-top: 1px solid #d2d2d2;	
+}

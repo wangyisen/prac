@@ -1,0 +1,506 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author">
+<title>学生首页</title>
+<link type="image/x-icon"  rel="shortcut icon" href="/CloudClassroom/favicon.ico"/>
+<link type="image/x-icon"  rel="bookmark" href="/CloudClassroom/favicon.ico"/>
+<!-- <link href="../../../imgs/favicon.ico" rel="shortcut icon" /> -->
+<link rel="stylesheet" href="../css/S_index.css">
+<link rel="stylesheet"
+	href="../../../js/bootstrap/css/bootstrap.min.css">
+<script src="../../../js/jQuery.js"></script>
+<script src="../../../js/cookie.js"></script>
+<script src="../../../js/radialIndicator.js"></script>
+<script src="../../../js/echarts.js"></script>
+<script src="../../../js/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!--头部-->
+	<div class="f-header">
+		<div class="f-center">
+			<div class="f-logo"></div>
+			<div class="s-login">
+				<a href="S_message.html">
+					<div class="s-Lmessage">
+						<!-- 此处带入className on 小红点显示有新消息;否则不显示无新消息 -->
+						<span class="s-LImg"><i class="s-LImgDot" id="s-LImgDot"></i></span>
+						<span class="f-LText">我的消息</span>
+					</div>
+				</a> <a>
+					<div class="s-Rmessage">
+						<span class="s-RImg"></span> <span class="f-RText">退出</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!--内容部分-->
+	<div class="f-content">
+		<!--左边-->
+		<div class="f-Lcontent">
+			<!--头像-->
+			<div class="f-UserBox">
+				<div class="f-UserImg">
+					<img src="../../../imgs/TouXiang.png">
+				</div>
+				<div class="f-SetImg"></div>
+				<div class="f-UserName"></div>
+			</div>
+			<!--菜单栏-->
+			<div class="f-UserNav">
+				<ul class="f-NavUl">
+					<li id='f-zhuomian'><a href="S_index.html">
+							<div class="f-zhuomian" data-class='f-zhuomian'>
+								<div class="f-zhuomainBox">
+									<img src="../../../imgs/zhuomian.png">
+								</div>
+
+								<span>我的桌面</span>
+							</div>
+					</a></li>
+					<li id="f-banji"><a href="S_management.html">
+							<div class="f-banji" data-class='f-banji'>
+								<div class="f-banjiBox">
+									<img src="../../../imgs/banji.png">
+								</div>
+								<span>我的班级</span>
+							</div>
+					</a></li>
+					<li id='f-zuoye'><a href="#">
+							<div class="f-zuoye" data-class='f-zuoye'>
+								<div class="f-zuoyeBox">
+									<img src="../../../imgs/zuoye.png">
+								</div>
+
+								<span>我的作业</span>
+							</div>
+					</a></li>
+					<li id='f-ziliao'><a href="S_material.html">
+							<div class="f-ziliao" data-class='f-ziliao'>
+								<div class="f-ziliaoBox">
+									<img src="../../../imgs/ziliao.png">
+								</div>
+
+								<span>我的资料</span>
+							</div>
+					</a></li>
+					<li id='f-shuju'><a href="S_dataCenter.html">
+							<div class="f-shuju" data-class='f-shuju'>
+								<div class="f-shujuBox">
+									<img src="../../../imgs/shuju.png">
+								</div>
+
+								<span>数据中心</span>
+							</div>
+					</a></li>
+					<li id='f-gongju'><a href="S_tools.html">
+							<div class="f-gongju" data-class='f-gongju'>
+								<div class="f-gongjuBox">
+									<img src="../../../imgs/gongju.png">
+
+								</div>
+
+								<span>学习工具</span>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+			<div class="f-sideBox">
+				<img src="../../../imgs/smallIcon.png">
+			</div>
+		</div>
+		<!--右边-->
+		<div class="f-Rcontent">
+			<!--学生端首页-->
+			<div class="f-SHome">
+				<!--第一部分-->
+				<div class="f-contentone">
+					<!--最新消息-->
+					<div class="f-news">
+						<div class="f-workHeader">
+							<div class="f-LworkHeader">
+								<div class="f-workIcon">
+									<img src="../../../imgs/icon-news.png">
+								</div>
+								<div class="f-workerT">最新消息</div>
+
+							</div>
+							<div class="f-more"><a href="S_message.html">查看更多</a></div>
+
+						</div>
+						<div class="scroll-box" id="f-news_box">
+							<ul>
+								<li class="f-newsBottom">
+									<div class="space1" id="m0_t"></div>
+									<div class="space2" id="m0_d"></div>
+								</li>
+								<li class="f-newsBottom">
+									<div class="space1" id="m1_t"></div>
+									<div class="space2" id="m1_d"></div>
+								</li>
+							</ul>
+						</div>
+						<div class="scroll-boxNull">暂无消息</div>
+						<div class="loadingTips hasHead" id="f-news_loading"
+							style="position: absolute; left: 0; top: 42px;">
+							<div class="loadingImg" style="background-size: 25% auto;"></div>
+						</div>
+					</div>
+					<!--待完成作业-->
+					<div class="f-workNoFinish">
+						<div class="loadingTips hasHead" id="f-workNoFinish_loading"
+							style="position: absolute; left: -169px; top: 104px;">
+							<div class="loadingImg" style="background-size: 35% auto;"></div>
+						</div>
+						<div class="f-workHeader">
+							<div class="f-LworkHeader">
+								<div class="f-workIcon">
+									<img src="../../../imgs/icon-task.png">
+								</div>
+								<div class="f-workerT">待完成作业</div>
+
+							</div>
+							<div class="f-more">学校作业</div>
+						</div>
+						<table border="0" cellspacing="" cellpadding=""
+							class="table table-striped myTTable">
+							<thead class="f-SThead">
+								<tr class="title">
+									<th>学科</th>
+									<th>作业名称</th>
+									<th>开始答题时间</th>
+									<th>截止答题时间</th>
+									<th>判分类型</th>
+								</tr>
+							</thead>
+							<tbody class="f-STbody" id="f-STbody">
+
+							</tbody>
+						</table>
+						<div class="f-STbodyNull" id="f-STbodyNull">暂无作业</div>
+					</div>
+					<!--今日课表-->
+					<div class="f-schedule">
+						<div class="loadingTips hasHead" id="f-schedule_loading"
+							style="position: absolute; left: 12px; top: 50px;">
+							<div class="loadingImg" style="background-size: 35% auto;"></div>
+						</div>
+						<div id="content1">
+							<div class="S-SContent">
+								<div class="f-workIcon space">
+									<img src="../../../imgs/course.png">
+								</div>
+								<div class="f-workerT space">今日课表</div>
+								<div class="f-workerTime">
+									<span id="timeLeft"><</span> <span id="time"></span> <span
+										id="timeRight">></span>
+								</div>
+							</div>
+							<table width="90%" border="1" cellspacing="" cellpadding=""
+								class="schedule" id="schedule">
+								<tr>
+									<td rowspan="4" id="morning">
+										<div class="wordClumn">上午</div>
+									</td>
+									<td id="l1_l">
+										<p>第一节</p> <span></span>
+									</td>
+									<td id="l1_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td id="l2_l">
+										<p>第二节</p> <span></span>
+									</td>
+									<td id="l2_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td id="l3_l">
+										<p>第三节</p> <span></span>
+									</td>
+									<td id="l3_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td id="l4_l">
+										<p>第四节</p> <span></span>
+									</td>
+									<td id="l4_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="3" id="afternoon">
+										<div class="wordClumn">下午</div>
+									</td>
+									<td id="l5_l">
+										<p>第一节</p> <span></span>
+									</td>
+									<td id="l5_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td id="l6_l">
+										<p>第二节</p> <span></span>
+									</td>
+									<td id="l6_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td id="l7_l">
+										<p>第三节</p> <span></span>
+									</td>
+									<td id="l7_r">
+										<p></p> <span></span>
+									</td>
+								</tr>
+							</table>
+							<table cellspacing="" cellpadding="" class="scheduleNull"
+								id="scheduleNull">
+								<tr>
+									<td rowspan="4" id="morning">
+										<div class="wordClumn">上午</div>
+									</td>
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="3" id="afternoon">
+										<div class="wordClumn">下午</div>
+									</td>
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<p></p> <span></span>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--第二部分-->
+				<div class="f-contentTwo">
+					<!--作业统计-->
+					<div class="f-work">
+						<!--头部-->
+						<div class="f-workHeader">
+							<div class="f-LworkHeader">
+								<div class="f-workIcon">
+									<img src="../../../imgs/icon-stats.png">
+								</div>
+								<div class="f-workerT">作业统计</div>
+							</div>
+							<div class="f-RworkHeader">
+								<div class="f-courseCont">
+									<select class="f-courseBox" id="f-courseBox">
+										<!-- <option value="语文">语文</option>
+										<option value="数学">数学</option>
+										<option value="英语">英语</option>
+										<option value="地理">地理</option> -->
+									</select>
+								</div>
+								<a class="f-goMore" href="#">
+									<div class="f-moreCourse">查看更多</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--有数据-->
+						<div class="f-works">
+							<div class="f-workOne">
+								<div class="loadingTips hasHead" id="f-workOne_loading"
+									style="position: absolute; left: 0px; top: 0px; z-index: 20;">
+									<div class="loadingImg" style="background-size: 35% auto;"></div>
+								</div>
+								<!--上部分-->
+								<div class="f-TworkOne">
+									<div class="f-Tcontent" id="f-Tcontent">
+										<div id="indicatorContainer">
+											<div class="f-workValue">
+												<div class="f-boxValue">
+													<p class="f-ringValue" id="f-ringValue"></p>
+													<p class="f-ranking" id="f-ranking">
+														排名：<span></span>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--无数据-->
+									<div class="f-TcontentNull" id="f-TcontentNull">
+										<div>
+											<img src="../../../imgs/workNull.png" alt="">
+										</div>
+									</div>
+									<div class="f-Ttext">最近一次作业得分与排名</div>
+								</div>
+								<!--下部分-->
+								<div class="f-BworkOne">
+									<div class="f-meanBox">
+										<div class="f-meanValue" id="f-meanValue"></div>
+										<section class="f-meanValuenull" id="f-meanValuenull">
+											<img src="../../../imgs/small_nullIcon.png" alt="">
+										</section>
+										<span class="f-meanText">班级均分</span>
+									</div>
+									<div class="f-topScoreBox">
+										<div class="f-topScoreValue" id="f-topScoreValue"></div>
+										<section class="f-topScoreValuenull" id="f-topScoreValuenull">
+											<img src="../../../imgs/small_nullIcon.png" alt="">
+										</section>
+										<span class="f-topScoreText">最高分</span>
+									</div>
+									<div class="f-medianBox">
+										<div class='f-medianValue' id="f-medianValue"></div>
+										<section class="f-medianValuenull" id="f-medianValuenull">
+											<img src="../../../imgs/small_nullIcon.png" alt="">
+										</section>
+										<span class="f-medianText">中位数</span>
+									</div>
+									<div class="f-lowestBox">
+										<div class="f-lowestValue" id="f-lowestValue"></div>
+										<section class="f-lowestValuenull" id="f-lowestValuenull">
+											<img src="../../../imgs/small_nullIcon.png" alt="">
+										</section>
+										<span class="f-lowestText">最低分</span>
+									</div>
+									<p class="clear"></p>
+								</div>
+							</div>
+							<!--作业成绩曲线-->
+							<div class="f-workeTwo">
+								<div class="loadingTips hasHead" id="f-workeTwo_loading"
+									style="position: absolute; left: 0px; top: 0px;">
+									<div class="loadingImg" style="background-size: 35% auto;"></div>
+								</div>
+								<div class="f-workeTwoTitle">
+									<span>作业成绩曲线</span> <span>(近一周)</span>
+								</div>
+								<div id="workeCont"></div>
+								<!--无数据-->
+								<div class="f-workeTwoNull" id="f-workeTwoNull">
+									<img src="../../../imgs/lineNull.png" alt="">
+									<div>暂无数据</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--课堂参与度-->
+					<div class="f-active">
+						<div class="f-activeCont">
+							<div class="f-activeHead">
+								<div class="f-activeImg">
+									<img src="../../../imgs/icon-grade.png">
+								</div>
+								<div class="f-activeText">
+									<span class="f-oneText">课堂参与度</span> <span class="f-TwoText">(近一周）</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="f-activeBox">
+								<div class="loadingTips hasHead" id="f-activeBox_loading"
+									style="position: absolute; left: 0px; top: 20px;">
+									<div class="loadingImg" style="background-size: 35% auto;"></div>
+								</div>
+								<div id="active"></div>
+								<div class="f-activeNull" id="f-activeNull">
+									<img src="../../../imgs/pieNull.png" alt="">
+									<div>暂无数据</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--第三部分-->
+				<div class="f-eBook">
+					<div class="f-eBookHead">
+						<div class="f-eBookImg">
+							<img src="../../../imgs/icon-ebook.png">
+						</div>
+						<div class="f-eBookText">
+							<span class="f-eBookOne">电子课本统计</span> <span class="f-eBookTwo">(近一周)</span>
+						</div>
+					</div>
+					<div class="f-eBookCont">
+
+						<div class="f-LeBook">
+							<div class="loadingTips hasHead" id="eBookLineCont_loading"
+								style="position: absolute; left: 0px; top: 0px;">
+								<div class="loadingImg" style="background-size: 35% auto;"></div>
+							</div>
+							<div class="f-LeBookTitle">
+								<div class="f-LeBookTitleText">电子书阅读统计</div>
+								<div class="f-eBookDiv">
+									<select class="f-eBookBox" id="f-eBookBox">
+										<!-- <option value="语文">语文</option>
+										<option value="数学">数学</option>
+										<option value="英语">英语</option>
+										<option value="地理">地理</option> -->
+									</select>
+								</div>
+							</div>
+							<div id="eBookLineCont"></div>
+							<div class="f-eBookLineContNull">
+								<img src="../../../imgs/lineNull.png">
+								<div>暂无数据</div>
+							</div>
+						</div>
+						<div class="f-ReBook">
+							<div class="loadingTips hasHead" id="eBookCount_loading"
+								style="position: absolute; left: 0px; top: -5px;">
+								<div class="loadingImg" style="background-size: 35% auto;"></div>
+							</div>
+							<div class="f-f-ReBookTitle">阅读电子书学科分布</div>
+							<div id="eBookCount"></div>
+							<div class="f-eBookCountNull" id="f-eBookCountNull">
+								<img src="../../../imgs/pieNull.png" alt="">
+								<div>暂无数据</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<link rel="stylesheet" href="../../../css/myCss.css">
+<script src="../../../js/myJs.js"></script>
+<script src="../js/S_index.js"></script>
+<script src="../js/S_index_interface.js"></script>

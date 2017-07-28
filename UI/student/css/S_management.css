@@ -1,0 +1,1032 @@
+#f-banji{
+   border-left: 4px solid #4aaaf4;
+    background-color: #f3f4f9;
+}
+.G-Head{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+.G-HeadUl{
+    height: 40px;
+    width: 100%;
+}
+.G-HeadUl>li{
+    width: 110px;
+    margin: 0 10px;
+    text-align: center;
+    float: left;
+    padding: 0 20px;
+    /*border-bottom: 2px solid #4aaaf4;*/
+    font-size: 16px;
+    color: #999999;
+    line-height: 40px;
+    cursor:pointer;
+}
+.G-HeadUl>li:first-child{
+    color: #4aaaf4;
+    border-bottom: 2px solid #4aaaf4;
+}
+/*课程表*/
+#timeTables{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 55px;
+    /*border: 1px solid red;*/
+    background: #e7edf2;
+}
+.G-timeTablesCont{
+    width: 100%;
+    height: 715px;
+    background: #fff;
+}
+ .G-timeCont{
+     width: 100%;
+     /*height: 100px;*/
+     padding: 20px;
+     position: relative;
+ }
+ 
+.G-TimeBody{
+    border: 1px solid #e7edf2;
+    height: 600px;
+    width: 100%;
+    text-align: center;
+}
+.G-TimeTbody>tr>td{
+    border: 1px solid #e7edf2;
+}
+.G-TimeThead th{
+    text-align: center;
+    background: #8a9fb2;
+
+    height: 50px;
+    width: 160px !important;
+    color: #fff;
+    border-bottom: 1px solid #8a9fb2;
+    position: relative;
+    /*cursor: pointer;*/
+}
+.GLine{
+    width:2px ;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.G-firstTh{
+    width: 68px !important;
+    position: relative;
+    border-bottom: 0px solid #8a9fb2;
+}
+.G-TimeThead P:nth-of-type(1){
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+.G-TimeThead P:nth-of-type(2){
+    margin: 0;
+    font-size: 12px;
+}
+.G-TimeTbody>tr{
+    height: 60px;
+}
+.G-TimeTbody p{
+   margin: 0;
+   font-size: 16px;
+}
+.G-TimeTbody p:nth-of-type(2){
+    font-size: 14px;
+    color: #999999;
+}
+.G-a,.G-p{
+    text-align: center;
+    height: 50px !important;
+    font-size: 16px;
+    background-color: #f4f7fa;
+}
+.G-TimeTbodySpot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fbb537;
+    border-radius:50%; 
+    margin-right: 10px;
+}
+#morningBox,#Afternoon{
+    width: 50px;
+    color: #ffffff;
+    font-size: 19px;
+    background: #8bc3ed;
+}
+
+.G-TimeCall{
+    position: relative;
+}
+
+.G-time{
+    width: 85px;
+    background-color: #f0f6fc;
+    color: #61a7e2;
+}
+.G-Slash {
+     width: 80%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: 24px;
+    left: 13px;
+    transform: rotate(11deg);
+}
+.G-day{
+     color: #fff;
+     position: absolute;
+     top: 26px;
+     left: 13px;
+     font-size: 15px;
+ }
+ .G-week{
+     color: #fff;
+     position: absolute;
+     top: 8px;
+     right: 13px;
+     font-size: 15px;
+ }
+/*蒙层*/
+.G-mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #939393;
+    opacity: 0.8;
+    z-index: 100;
+    display: none;
+}
+.G-TimeAlert{
+    width: 334px;
+    /*height: 267px;*/
+    background: #fff;
+    position: fixed;
+    top: -moz-calc(50% - 133px);
+    top: -webkit-calc(50% - 133px);
+    top: calc(50% - 133px);
+    left:-moz-calc(50% - 167px);
+    left: -webkit-calc(50% - 167px);
+    left: calc(50% - 167px);
+    z-index: 101;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    display: none;
+}
+.G-TimeTitle{
+    width: 100%;
+    height: 50px;
+    border-bottom:1px solid  #e2e9f0;
+    position: relative;
+}
+#G-mouldTime{
+    width: 114px;
+    height: 100%;
+    padding:0 10px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    color: #4aaaf4;
+    border-bottom: 3px solid #4aaaf4;
+    float: left;
+    margin-left:30px ;
+}
+#G-freeTime{
+    /*width: 114px;*/
+    height: 100%;
+    padding:0 10px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    color: #999999;
+    /*border-bottom: 3px solid #4aaaf4;*/
+    float: left;
+    margin-left:34px ;
+}
+.G-mouldBody{
+    text-align: center;
+    padding-top: 28px;
+}
+.G-mouldCont{
+    /*display: none;*/
+}
+.G-mouldSub,.G-mouldTeacher{
+    margin-bottom:20px; 
+}
+.G-mouldBtn{
+    width: 220px;
+    height: 36px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    margin: 0 auto;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 36px;
+    background: #fff;
+    text-align: center;
+}
+.G-mouldBtn:hover{
+    color: #fff;
+    background:  #4aaaf4;
+}
+.G-mouldSubBox,.G-mouldTeacherBox{
+    width: 220px;
+    height: 36px;
+    text-align: center;
+      border: solid 1px #dfdfdf;
+    border-radius:20px; 
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 190px 12px;
+    font-size:16px;
+    line-height: 36px;
+}
+.G-mouldSubBox:hover,.G-mouldTeacherBox:hover{
+    border:1px solid  #4aaaf4;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 190px 12px;
+}
+.G-mouldSubBox::-ms-expand, .G-mouldTeacherBox::-ms-expand { 
+    display: none;
+ }
+.G-closeBtn{
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    right: -33px;
+    border-radius: 50%;
+}
+.G-closeBtn>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.G-freeCont{
+    display: none;
+}
+.G-freeInputBox{
+    width: 220px;
+    height: 36px;
+    margin: 0 auto;
+}
+.G-freeInput{
+    height: 36px !important;
+    border: solid 1px #dfdfdf !important;
+    border-radius: 20px !important;
+    font-size: 16px !important;
+    box-shadow: inset 0 0px 0 rgba(0, 0, 0, .075 ) !important;
+}
+.G-freeInput:hover{
+    border:1px solid  #4aaaf4 !important;
+}
+.G-freeSubBtn{
+    height: 36px ;
+    width: 220px ;
+    margin: 20px auto 0;
+    font-size: 16px !important;
+}
+.G-freeBtn{
+     height: 36px !important;
+    width: 100%;
+    border: solid 1px #4aaaf4 !important;
+    border-radius: 20px !important;
+    background: #fff;
+    color: #4aaaf4;
+}
+.G-freeBtn:hover{
+    background: #4aaaf4;
+    color: #fff;
+}
+.G-DelTime{
+    width: 332px;
+    /*height: 262px;*/
+    background: #fff;
+    position: fixed;
+    top: -moz-calc(50% - 131px);
+    top: -webkit-calc(50% - 131px);
+    top: calc(50% - 131px);
+    left:-moz-calc(50% - 166px);
+    left: -webkit-calc(50% - 166px);
+    left: calc(50% - 166px);
+    z-index: 101;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    display: none;
+}
+.G-DelTimeTop{
+    position: relative;
+}
+.G-DelTimeTop>img{
+    width: 100%;
+    height: 118px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.G-DelTimeCol{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -36px;
+}
+.G-DelTimeBot{
+    padding-top: 30px;
+    text-align: center;
+}
+.G-DelTimeBot>span{
+    font-size: 18px;
+}
+.G-DelTimeBtn{
+    width: 220px;
+    height: 36px;
+    border: 1px solid #4aaaf4;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 36px;
+    color: #4aaaf4;
+    margin:30px auto 0;
+    background: #fff;
+}
+.G-DelTimeBtn:hover{
+    color: #fff;
+    background: #4aaaf4;
+}
+/*==================== 编辑座位蒙层 ====================*/
+#editSeatTC .G-SeatAlert{
+	width: 334px;
+	background-color: #fff;
+	margin-top: 200px;
+    margin-left: -87px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+	top: 0;
+}
+#editSeatTC .tc-closeBtn.G-closeBtn{
+	top: 0;
+	margin-left: 258px;
+	margin-top: 200px;
+}
+.G-SeatTitle{
+	width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #59a1fd;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 10px 10px 0 0;
+}
+.G-SeatBody{
+	padding: 20px 40px;
+}
+.seat-doneBox{
+	padding-bottom: 8px;
+	border-bottom: 1px solid #e2e9f0;
+}
+.doneName{
+	color: #999;
+	line-height: 20px;
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+.doneContent{
+	padding-bottom: 10px;
+}
+.doneConL{
+	float: left;
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	color: 14px;
+}
+.doneConR{
+	float: right;
+	width: 222px;
+	height: 36px;
+	border-radius: 18px;
+	border: 1px solid #dfdfdf;
+	overflow: hidden;
+	position: relative;
+}
+.doneInput{
+	width: 150px;
+	height: 34px;
+	line-height: 34px;
+	border: 0 none;
+	margin: 0 auto;
+	text-align: center;
+	color: #000;
+	font-size: 14px;
+	display: block;
+}
+.doneBtn{
+	display: block;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top: 10px;
+}
+.doneBtnL{
+	left: 17px;
+}
+.doneBtnR{
+	right: 17px;
+}
+.doneBtn .doneBtnH{
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 13px;
+	height: 3px;
+	background-color: #dfdfdf;
+}
+.doneBtn .doneBtnV{
+	position: absolute;
+	left: 5px;
+	top: 0;
+	width: 3px;
+	height: 13px;
+	background-color: #dfdfdf;
+}
+.seat-choseBox{
+	padding: 10px 0;
+}
+.choseContent{
+	padding-bottom: 10px;
+}
+.choseConL{
+	float: left;
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	color: 14px;
+}
+.choseConR{
+	float: right;
+	width: 223px;
+}
+.checkedBox{
+	float: left;
+	width: 37px;
+	height: 16px;
+	margin-bottom: 5px;
+}
+.checkedBox .checkLabel{
+	display: block;
+	width: 37px;
+	height: 16px;
+	line-height: 16px;
+	margin: 0;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000;
+	background-image: url(../../../imgs/icon-checked-off.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.checkedBox.on .checkLabel{
+	background-image: url(../../../imgs/icon-checked-on.png);
+}
+.checkedBox .checkLabel .checkInput{
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 16px;
+	margin: 0 5px 0 0;
+	opacity: 0;
+}
+.G-freeCont{
+    display: none;
+}
+.G-freeInputBox{
+    width: 220px;
+    height: 36px;
+    margin: 0 auto;
+}
+.G-freeInput{
+    height: 36px !important;
+    border: solid 1px #dfdfdf !important;
+    border-radius: 20px !important;
+    font-size: 16px !important;
+    box-shadow: inset 0 0px 0 rgba(0, 0, 0, .075 ) !important;
+}
+.G-freeInput:hover{
+    border:1px solid  #4aaaf4 !important;
+}
+.G-freeSubBtn{
+    height: 36px ;
+    width: 220px ;
+    margin: 20px auto 0;
+    font-size: 16px !important;
+}
+.G-freeBtn{
+     height: 36px !important;
+    width: 100%;
+    border: solid 1px #4aaaf4 !important;
+    border-radius: 20px !important;
+    background: #fff;
+    color: #4aaaf4;
+}
+.G-freeBtn:hover{
+    background: #4aaaf4;
+    color: #fff;
+}
+.G-DelTime{
+    width: 332px;
+    /*height: 262px;*/
+    background: #fff;
+    position: fixed;
+    top: -moz-calc(50% - 131px);
+    top: -webkit-calc(50% - 131px);
+    top: calc(50% - 131px);
+    left:-moz-calc(50% - 166px);
+    left: -webkit-calc(50% - 166px);
+    left: calc(50% - 166px);
+    z-index: 101;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    display: none;
+}
+.G-DelTimeTop{
+    position: relative;
+}
+.G-DelTimeTop>img{
+    width: 100%;
+    height: 118px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.G-DelTimeCol{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -36px;
+}
+.G-DelTimeBot{
+    padding-top: 30px;
+    text-align: center;
+}
+.G-DelTimeBot>span{
+    font-size: 18px;
+}
+.G-DelTimeBtn{
+    width: 220px;
+    height: 36px;
+    border: 1px solid #4aaaf4;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 36px;
+    color: #4aaaf4;
+    margin:30px auto 0;
+    background: #fff;
+}
+.G-DelTimeBtn:hover{
+    color: #fff;
+    background: #4aaaf4;
+}
+/*==================== 选择学生弹出层 ====================*/
+.seatNamedBox{
+	width: 195px;
+	height: 244px;
+	position: absolute;
+	z-index: 95;
+	left: 50%;
+	margin-left: -96px;
+	top: 190px;
+	border-radius: 5px;
+	background-color: #FFF;
+	overflow: hidden;
+	box-shadow: 0px 0px 21px rgba(142,142,142,0.23);
+	display: none;
+}
+.namedTitle{
+	width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #59a1fd;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 5px 5px 0 0;
+}
+.namedBody{
+	width: 187px;
+	height: 204px;
+	margin: 0 auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.namedList{
+	display: block;
+	width: 160px;
+	margin: 0 auto;
+	border-bottom: 1px solid #f3f4f9;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	color: #000;
+}
+.namedList:last-child{
+	border-bottom: 0 none;
+}
+.namedList:hover{
+	color: #59a1fd;
+}
+.namedList.namedList00{
+	color: #999;
+}
+/*==================== 座位表 ====================*/
+#seatingChart{
+    display: none;
+    position: relative;
+}
+.seatCon-null{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    min-height: 655px;
+    background: #fff;
+    padding-top: 222px;
+    display: block;
+}
+.seatCon-null .nullSeat-img{
+    width: 200px;
+    margin: 0 auto;
+}
+.seatCon-null .nullSeat-img img{
+    width: 100%;
+    height: auto;
+}
+.seatCon-null .nullSeat-text{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+}
+.seatCon-null .G-mouldBtn{
+    cursor: pointer;
+    width: 162px;
+    height: 36px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    margin: 0 auto;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 34px;
+    background: #fff;
+    text-align: center;
+}
+.seatCon-null .G-mouldBtn:hover{
+    color: #fff;
+    background:  #4aaaf4;
+}
+.seatCon-seats{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    min-height: 655px;
+    background: #fff;
+    display: none;
+}
+.seat-header {
+    height: 50px;
+    border-bottom: 1px solid #e2e9f1;
+    position: relative;
+}
+.seat-editBtn{
+    width: 90px;
+    height:22px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    right: 22px;
+    top: 15px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    cursor: pointer;
+}
+.seat-editBtn:hover {
+    background: #4aaaf4;
+    color: #FFFFFF;
+}
+.seat-content{
+    padding: 20px 20px 20px 30px;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+.seatDais{
+    width: 280px;
+    height: auto;
+    margin: 0 auto 30px;
+    padding-top: 5px;
+}
+.seatDais img{
+    width: 100%;
+    height: auto;
+}
+
+.seatDesksBox{position: relative;}
+.seatDesksBox .aisleY{
+    position: absolute;
+    top: 0;
+    width: 93px;
+    height: 100%;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background: url(../../../imgs/pic-aisle.png) no-repeat center center;
+    background-size: 100% 100%;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+.seatDesksBox .aisleX{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background: url(../../../imgs/pic-aisleX.png) no-repeat center center;
+    background-size: 100% 100%;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+.seatDesks{
+    position: relative;
+    border: 0 none;
+    margin: 0 auto;
+}
+.seatDesks tr td{
+    width: 120px;
+    height: 58px;
+}
+.desk{
+    display: block;
+    border-radius: 3px;
+    width: 110px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    background-color: #e3edf8;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.desk.hover{
+    background-color: #cbdaeb;
+}
+
+/* 任课老师 */
+#Teachers{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    height: 655px;
+    background: #fff;
+    padding-top: 1px;
+    display: none;
+    position: relative;
+}
+.teachers-header {
+    height: 50px;
+    border-bottom: 1px solid #e2e9f1;
+    position: relative;
+}
+.s-tableHead{
+    border: 1px solid #e2e9f1;
+}
+.s-tableHead>tr{
+ height: 40px;
+}
+.s-tableBody>tr{
+    height: 50px;
+}
+.f-selectClass{
+    position: absolute;
+    left: 30px;
+    top: 15px;
+}
+.f-classBox {
+    border: solid 1px #dfdfdf;
+    border-radius:20px; 
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 35px;
+    padding-left: 12px;
+    padding-top: 2px;
+    padding-bottom:2px;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 97px 8px;
+    font-size:12px;
+    line-height: 20px;
+}
+.f-classBox:hover {
+    border:1px solid  #5ecbf2;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 97px 8px;
+}
+.f-classBox::-ms-expand {
+    display: none;
+}
+.teachers-table-div{
+    height: 545px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.teachers-table {
+    width: 100%;
+    /* height: 100%; */
+    /*border: 1px solid #e2e9f1;*/
+    border: 1px;
+}
+.teachers-table-th {
+    background-color: #8a9fb2;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-weight:normal !important;
+}
+.teachers-table-tr {
+    font-size: 14px;
+    text-align: center;
+}
+.th-num {
+    border-right: none;
+    width: 15%;
+    text-align: center;
+    margin-bottom: 0;
+}
+.th-num>p {
+    margin-bottom: 0;
+    border-right: 1px solid #e2e9f1;    
+}
+.th-lesson {
+    border-left: none;
+    border-right: none;
+    width: 28%;
+    text-align: center;
+}
+.th-lesson>p {
+    margin-bottom: 0;
+    border-left: 1px solid #e2e9f1;
+    border-right: 1px solid #e2e9f1; 
+}
+.th-teacher {
+    border-left: none;
+    border-right: none;
+    width: 28%;
+    text-align: center;
+}
+.th-teacher>p {
+    margin-bottom: 0;
+    border-left: 1px solid #e2e9f1;
+    border-right: 1px solid #e2e9f1; 
+}
+.th-tel {
+    border-left: none;
+    width: 28%;
+    text-align: center;
+}
+.th-tel>p {
+    margin-bottom: 0;
+    border-left: 1px solid #e2e9f1;
+}
+
+.s-tableBody td{
+    border:1px solid #e2e9f1;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+#Recipes{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    height: 680px;
+    background: #fff;
+    position: relative;
+    display: none;
+}
+.recipes-time {
+    height: 55px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    padding-left: 2px;
+    line-height: 55px;
+    font-size: 16px;
+}
+.recipes-table-div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.recipes-table {
+    width: 100%;
+    border: 1px solid #f0f6fc;
+}
+.recipes-table td{
+    border: 1px solid #e2e9f1;
+}
+.recipes-table-th{
+    position: relative;
+}
+.recipes-table-thead>tr {
+    background-color: #8c9fb2;
+    height: 50px;
+    border: 1px solid #e2e9f1
+}
+.recipes-table-th>th {
+    text-align: center;
+    border: none;
+}
+.RLine{
+    width: 2px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    top: 15px;
+    
+}
+.recipes-table-breakfast {
+    height: 80px;
+}
+.recipes-table-breakfast>td {
+    text-align: center;
+}
+.recipes-table-lunch {
+    height: 90px;
+}
+.recipes-table-lunch>td {
+    text-align: center;
+}
+.recipes-table-soup {
+    height: 50px;
+}
+.recipes-table-soup>td {
+    text-align: center;
+}
+#outfit{
+    font-weight: 400;
+    position: relative;
+    border-bottom: 0px solid #8a9fb2;
+}
+.s-Slash {
+     width: 90%;
+     height: 1px;
+     background: #fff;
+    position: absolute;
+    top: 26px;
+    left: 9px;
+    transform: rotate(9deg);
+}
+.s-Foot{
+     color: #fff;
+     position: absolute;
+     top: 22px;
+     left: 11px;
+     font-size: 15px;
+ }
+ .s-week{
+     color: #fff;
+     position: absolute;
+     top: 5px;
+     right: 8px;
+     font-size: 15px;
+ }
+
+
+
+

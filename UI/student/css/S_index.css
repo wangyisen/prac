@@ -1,0 +1,609 @@
+#f-zhuomian{
+   border-left: 4px solid #4aaaf4;
+    background-color: #f3f4f9;
+}
+/*----------------------------学生端首页----------------------------------*/
+.f-SHome{
+    display: block;
+    padding: 20px 20px 40px 20px;
+    background: #e7edf2;
+}
+
+.f-contentone{
+	height: 330px;
+    /*border: 1px solid red;*/
+    width: 100%; 
+    position: relative;
+    /* margin-top: 20px; */
+}
+/*最新消息*/
+.scroll-box{
+   width: 100%;
+   height: 43px;
+   /*margin: 20px auto;*/
+   overflow: hidden;
+   display: none;
+ 
+  }
+.scroll-box li{
+ list-style-type:none;
+ height:43px;
+ text-align:left;
+ text-indent:15px;
+}
+.scroll-box li div{
+    float: left;
+    width: 50%;
+}
+.scroll-boxNull{
+    width: 100%;
+    height: 43px;
+    line-height: 43px;
+    font-size: 14px;
+    color: #aca9a9;
+    text-align: center;
+    display: none;
+
+}
+.space1{
+    text-align: left;
+    padding-left: 20px;
+}
+.space2{
+    text-align: right;
+    padding-right: 20px;
+}
+.f-newsBottom{
+    overflow: auto;
+    list-style-type: none;
+    line-height: 43px;
+}
+.f-news{
+    width: 65%;
+    width: -moz-calc(100% - 340px);
+    width: -webkit-calc(100% - 340px);
+    width: calc(100% - 340px);
+    height: 87px;
+    background-color: white;
+    position: relative;
+}
+.f-more{
+    padding: 0px 10px;
+    line-height: 25px;
+    font-size: 12px;
+    border:1px solid #4aaaf4;
+    border-radius: 20px;
+    color: #4aaaf4;
+    text-align: center;
+    margin-left: 10px;
+    width: 72px;
+    float: right;
+}
+.f-more:hover {
+    background: #4aaaf4;
+    color: #FFFFFF;
+}
+/*作业未完成*/
+.f-SThead{
+    border-bottom: 1px solid #aca9a9;
+}
+
+.myTTable td{
+    font-size: 14px;
+    height: 45px;
+    line-height: 45px;
+}
+.f-workNoFinish{
+    background-color: white;
+    width: -moz-calc(100% - 340px);
+    width: -webkit-calc(100% - 340px);
+    width: calc(100% - 340px);
+    height: 220px;
+    margin: 20px 0;
+}
+.title th , td{
+    text-align: center;
+}
+.f-STbody{
+    display: none;
+}
+.f-STbodyNull{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #aca9a9;
+    display: none;
+}
+
+/*今日课表*/
+.space{
+    padding-left: 5%;
+    margin-bottom: 5px;
+}
+#timeLeft{
+    /* margin-left: 44%; */
+}
+#timeLeft,#timeRight{
+    cursor: pointer;
+}
+.f-schedule{
+    /*width: 35%;*/
+    width: 340px;
+    background-color: #E7EDF2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 304px;
+    padding-left: 20px;
+}
+.schedule{
+    margin: 0 auto;
+    /*margin-left: 20px;*/
+    border-color: #EBF0F6;
+    display: none;
+}
+.schedule td{
+    width: 40%;
+    border: 1px solid #dddddd;
+     padding: 1px 0;
+}
+#morning , #afternoon{
+    position: relative;
+    width: 20%;
+}
+.S-SContent{
+    height: 40px;
+    padding: 10px 20px 10px 0;
+}
+#content1{
+    background-color: white;
+    height: 326px;
+    padding: 5px 0;
+}
+.schedule td{
+   height: 38px;
+}
+.schedule td p{
+    margin: 0;
+    font-size: 12px;
+    
+}
+.schedule td span{
+    font-size: 12px;
+    color: gainsboro;
+}
+.scheduleNull{
+    width: 90%;
+    border: 1px solid red;
+    margin: 0 auto;
+    display: none;
+}
+.scheduleNull td{
+    width: 40%;
+    border: 1px solid #dddddd;
+    padding: 13px 0;
+}
+
+.wordClumn{
+    width:20px;
+    height: 50px;
+    line-height:24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -25px;
+}
+/* 作业统计 */
+.f-contentTwo{
+    height: 330px;
+    /*border: 1px solid red;*/
+    width: 100%; 
+    position: relative;
+    top: 18px;
+    /* margin-top: 20px; */
+}
+.f-work{
+    width: -moz-calc(100% - 340px);
+    width: -webkit-calc(100% - 340px);
+    width: calc(100% - 340px);
+    /*border: 1px solid darkgreen;*/
+    position: absolute;
+    left: 0;
+    background-color:#ffffff;
+}
+
+.f-active{
+    /*width: 35%;*/
+    width: 340px;
+    /*border: 1px solid blue;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left:20px; 
+    /*background-color:#ffffff;*/
+}
+
+.f-workHeader{
+    border-bottom:1px solid  #aca9a9;
+    padding: 7px 20px 30px 20px;
+   position: relative;
+   height: 40px;
+}
+
+.f-LworkHeader{
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.f-workIcon{
+    width: 22px;
+    height: 22px;
+    float: left;
+    padding-top: 2px;
+}
+
+.f-workerT{
+    float: left;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.f-workerTime{
+    float: right;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #aca9a9;
+}
+
+.f-courseCont{
+    height: 25px;
+    float: left;
+}
+/*下拉框*/
+.f-eBookBox,.f-courseBox {
+    border: solid 1px #dfdfdf;
+    border-radius:20px; 
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 35px;
+    padding-left: 12px;
+    padding-top: 2px;
+    padding-bottom:2px;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 55px 8px;
+    font-size:12px;
+    line-height: 20px;
+}
+.f-eBookBox:hover,.f-courseBox:hover{
+    border:1px solid  #5ecbf2;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 55px 8px;
+}
+.f-eBookBox::-ms-expand, .f-courseBox::-ms-expand { 
+    display: none;
+ }
+.f-moreCourse{
+    padding: 0px 10px;
+    line-height: 25px;
+    font-size: 12px;
+    border: 1px solid #4aaaf4;
+    border-radius: 20px;
+    color: #4aaaf4;
+    text-align: center;
+    margin-left: 10px;
+}
+.f-moreCourse:hover {
+    background: #4aaaf4;
+    color: #FFFFFF;
+}
+.f-goMore{
+     float: left;
+}
+.clear{
+    clear: both;
+}
+.f-RworkHeader{
+      float:right;
+      position: absolute;
+      bottom: 6px;
+      right: 20px;
+}
+/*作业统计有数据*/
+.f-works{
+    position: relative;
+}
+
+.f-workOne{
+    width: 37%;
+    height: 290px;
+    position: absolute;
+    left: 0;
+    background-color:#ffffff;
+    padding: 10px 15px;
+}
+
+.f-TworkOne{
+    width: 100%;
+    margin: 20PX 0PX;
+}
+
+#indicatorContainer{
+    position: absolute;
+    top: 0px;
+    left: -moz-calc((100% - 142px ) / 2 );
+    left: -webkit-calc((100% - 142px ) / 2);
+    left: calc((100% - 142px) / 2);
+    }
+.f-Tcontent{
+    position: relative;
+    height: 150px;
+     display: none; 
+    
+}
+.f-TcontentNull{
+     position: relative;
+     height: 150px;
+     width: 100%;
+     text-align: center;
+     display: none;
+}
+.f-workValue{
+    background: #ffffff;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 8%;
+    text-align: center;
+}
+.f-Ttext{
+    text-align: center;
+    font-size: 12px;
+    color: #aca9a9;
+}
+
+.f-boxValue{
+    padding-top: 25px; 
+}
+.f-ringValue{
+    font-size: 40px;
+}
+.f-ranking{
+    font-size: 12px;
+    color: #aca9a9;
+    position: absolute;
+    top: 75px;
+    left: 35px;
+}
+.f-ranking>span{
+    font-size: 16px;
+}
+/*下部分*/
+.f-BworkOne{
+    /*border: 1px solid red;*/
+    margin-bottom:25px; 
+}
+.f-BworkOne>div{
+    width: 25%;
+    float: left;
+    text-align: center;
+    /*margin-right: 10px;*/
+}
+.f-BworkOne>div>div{
+    font-size: 24px;
+    display: none;
+    
+}
+.f-BworkOne>div>section{
+    text-align: center;
+    display: none;
+}
+.f-BworkOne>div>span{
+    font-size: 12px;
+   color: #aca9a9;
+   display: none;
+}
+.f-workeTwo{
+    width: 63%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:#ffffff;
+    padding-top: 10px;
+
+}
+.f-workeTwoTitle{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.f-workeTwoTitle>span:nth-child(1){
+    font-size: 16px;
+}
+.f-workeTwoTitle>span:nth-child(2){
+    font-size: 14px;
+    color: #aca9a9;
+}
+#workeCont{
+    height: 280px;
+    width: 100%; 
+    background-color:#ffffff;
+    opacity: 0;
+}
+.f-workeTwoNull{
+    height: 280px;
+    width: 100%;
+    text-align: center;
+    padding-top:80px; 
+    display: none;
+    
+}
+.f-workeTwoNull>div{
+    font-size: 16px;
+    color: #aca9a9;
+    padding-top: 20px;
+}
+/*课堂参与度*/
+.f-activeCont{
+    width: 100%;
+    height: 100%;
+    background-color:#ffffff;
+}
+.f-activeHead{
+    border-bottom:1px solid  #aca9a9;; 
+    padding: 10px 20px 5px 20px;
+    height: 40px;
+    width: 100%;
+}
+.f-activeImg{
+    width: 22px;
+    height: 22px;
+    float: left;
+    margin-right: 10px;
+}
+ .f-activeText{
+     float: left;
+ }
+ .f-oneText{
+     font-size: 18px;
+ }
+ .f-TwoText{
+     font-size: 14px;
+     color: #aca9a9;
+ }
+.f-activeBox{
+    background: #ffffff;
+    padding: 0 20px;
+}
+#active{
+    height: 290px;
+    width: 100%;
+    background: #ffffff;
+    opacity: 0;
+    /*  display: none; */ 
+}
+.f-activeNull{
+    height: 290px;
+    width: 100%;
+    text-align: center;
+    padding-top: 90px;
+    display: none;
+}
+.f-activeNull>div{
+    padding-top: 20px;
+    color: #aca9a9;
+    font-size: 16px;
+}
+
+
+.f-eBook{
+    width: 100%;
+    height: 350px;
+    /*border: 1px solid red;*/
+    position: relative;
+    background: #ffffff;
+    margin-top: 44px;
+}
+.f-eBookHead{
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #aca9a9;
+}
+.f-eBookCont{
+    width: 100%;
+    height: 100px;
+    /*padding: 10px 20px;*/
+    position: relative;
+}
+.f-eBookImg{
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    float: left;
+}
+.f-eBookOne{
+     font-size: 18px;
+ }
+ .f-eBookTwo{
+     font-size: 14px;
+     color: #aca9a9;
+ }
+ .f-LeBook{
+     width: -moz-calc(100% - 340px);
+     width: -webkit-calc(100% - 340px);
+     width: calc(100% - 340px);
+     padding: 0 20px ;
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+ .f-LeBookTitle{
+    height: 50px;
+    width: 100%;
+ }
+ .f-ReBook{
+     /*width: 35%;*/
+     width: 340px;
+     /*height: 100px;*/
+     padding: 10px 20px;
+     position: absolute;
+     top: 0;
+     right: 0;
+ }
+.f-eBookDiv{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+#eBookLineCont{
+    height: 260px;
+    background: #ffffff;
+    opacity: 0;
+     /* display: none; */ 
+}
+.f-eBookLineContNull{
+     height: 260px;
+     width: 100%;
+     text-align: center;
+     padding-top:40px; 
+     display: none;
+}
+.f-eBookLineContNull>div{
+    font-size: 16px;
+    color: #aca9a9;
+    padding-top: 20px;
+}
+#eBookCount{
+    height: 300px;
+    /*border: 1px solid magenta;*/
+    padding-left:  20px;
+    /*  display: none; */ 
+}
+.f-eBookCountNull{
+    height: 300px;
+    /*border: 1px solid magenta;*/
+    padding-left:  20px;
+    text-align: center;
+    padding-top: 80px;
+    display: none;
+}
+.f-eBookCountNull>div{
+    font-size: 16px;
+    color: #aca9a9;
+    padding-top: 20px;
+}
+.f-LeBookTitleText{
+    font-size: 16px;
+    line-height: 50px;
+}
+.f-f-ReBookTitle{
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}

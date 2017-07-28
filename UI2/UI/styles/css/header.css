@@ -1,0 +1,35 @@
+.nav-simple{
+	width: 1920px;
+	height: 50px;
+	line-height: 60px;
+	background: #2196f3;
+	color: #ffffff;
+}
+.nav-simple .logo{
+	float: left;
+	font-size: 26px;
+	font-weight: bold;
+	margin-left: 95px;
+}
+.nav-simple .content{
+	float: left;
+	width: 500px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+}
+/*.nav-simple .content span{
+	padding-right: 10px;
+}*/
+
+.nav-simple .userinfo{
+	font-weight: bold;
+	float: right;
+	margin-right: 50px;
+}
+.nav-simple .userinfo span{
+	padding-left: 10px;
+}
+.nav-simple .userinfo span + span{
+	border-left:solid #ffffff;
+}

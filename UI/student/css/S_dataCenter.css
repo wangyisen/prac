@@ -1,0 +1,701 @@
+#f-shuju{
+   border-left: 4px solid #4aaaf4;
+    background-color: #f3f4f9;
+}
+.f-Rcontent{
+    position: absolute;
+}
+.G-Head{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    padding-left: 10px;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+.G-HeadUl{
+    height: 40px;
+    width: 100%;
+}
+.G-HeadUl>li{
+    width: 110px;
+    margin: 0 10px;
+    text-align: center;
+    float: left;
+    /*padding: 0 20px;*/
+    /*border-bottom: 2px solid #4aaaf4;*/
+    font-size: 16px;
+    color: #999999;
+    line-height: 38px;
+    cursor:pointer;
+}
+.G-HeadUl>li:first-child{
+    color: #4aaaf4;
+    border-bottom: 2px solid #4aaaf4;
+}
+.D-body{
+    z-index: 1;
+}
+/*课堂互动统计*/
+#D-class{
+    width: 100%;
+    padding: 20px;
+    /*padding-bottom: 55px;*/
+    background: #e7edf2;
+    opacity:1;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+}
+.D-active{
+    width: 100%;
+    height: 375px;
+    border-bottom: 1px solid #e2e9f0;
+    background: #fff;
+    position: relative;
+}
+.activeCont{
+    border-bottom: 1px solid #e2e9f0;
+    height: 50px;
+    position: relative;
+}
+.activeTitle{
+    width: 100%;
+    height: 50px;
+    margin: 0 20px;
+    line-height: 48px;
+}
+.activeTitleB{
+    font-size: 16px;
+    line-height: 49px;
+}
+.activeTitleS{
+    font-size: 14px;
+    color: #b5b5b5;
+    margin-left: 5px;
+    line-height: 49px;
+}
+.stat-time{
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    color: #999999;
+    text-align: center;
+    line-height: 29px;
+    border-radius:15px; 
+    position: absolute;
+    top: 11px;
+    right: 160px;
+}
+.stat-time.on{
+    color: #39c18c;
+    border: 1px solid #39c18c;
+}
+.stat-time:hover{
+    color: #fff;
+    background: #39c18c;
+    border: 1px solid #39c18c;
+}
+
+
+.stat-sub{
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    color: #999999;
+    text-align: center;
+    line-height: 29px;
+    border-radius:15px; 
+    position: absolute;
+    top: 11px;
+    right: 20px;
+}
+.stat-sub.on{
+    color: #39c18c;
+    border: 1px solid #39c18c;
+}
+.stat-sub:hover{
+    color: #fff;
+    background: #39c18c;
+    border: 1px solid #39c18c;
+}
+
+
+.actSubject{
+    width: 90px;
+    height: 24px;
+}
+
+.D-activeSubBox{
+     width: 90px;
+    height: 24px;
+    padding-left:10px; 
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position:68px 7px;
+}
+.D-activeSubBox:hover{
+    border:1px solid  #4aaaf4;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position:68px 7px;
+}
+.D-activeSubBox{
+
+    border: solid 1px #dfdfdf;
+    border-radius:20px; 
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    font-size:12px;
+    line-height: 24px;
+}
+.D-activeSubBox::-ms-expand { 
+    display: none;
+ }
+.activeBtn{
+    width: 70px;
+    height: 24px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius:12px; 
+    cursor: pointer;
+}
+.activeBtn:hover{
+    color: #fff;
+    background: #4aaaf4;
+}
+.activeSelect{
+    position: absolute;
+    top: 13px;
+    right: 20px;
+}
+.activeSelect>div{
+    float: left;
+}
+.TimeBox{
+    margin-left: 20px;
+    margin-right: 60px;
+}
+/*-------------------选择日期-----------------------*/
+#timeQuery {
+	position: relative;
+	left: 0px;
+	display: none;
+	width: 260px;
+	height: 27px;
+	display: inline-block;
+}
+#startTime {
+	position: absolute;
+	width: 135px;
+}
+
+#startTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+#endTime {
+	position: absolute;
+	left: 170px;
+	width: 135px;
+}
+
+#endTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+
+.aa {
+	padding-left: 15px !important;
+	padding-right: 0px !important;
+	height: 25px;
+}
+
+.bb {
+	border: 1px solid #dfdfdf;
+	border-top-right-radius: 20px !important;
+	border-bottom-right-radius: 20px !important;
+	padding-left: 8px !important;
+	padding-top: 3px !important;
+    padding-right: 9px !important;
+    padding-bottom: 5px  !important;
+}
+.timeInfix {
+	position: absolute;
+	top: 3px;
+	left: 146px;
+	color: #8e8e8e;
+}
+.imgBox{
+    position: relative;
+    top: 3 !important;
+}
+/*----------------------------------------------------------------------------*/
+/*学生课堂活跃度图表*/
+#activeChart{
+    margin: 0 20px;
+    height: 325px;
+    /*display: none;*/
+}
+.interactDiv{
+    width: 100%;
+    height: 390px;
+    border-bottom: 1px solid #e2e9f0;
+    background: #fff;
+}
+.partake{
+    position: absolute;
+    right: 20px;
+    top: 65px;
+}
+.numBox{
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    margin-left:-43px; 
+    opacity: 0;
+    z-index: 5;
+    display: none;
+}
+.numBox>span{
+    color: #999999;
+}
+.num{
+    display: inline-block;
+    margin: 0 5px;
+}
+#participateChart{
+    padding:0 20px;
+    height: 340px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+    display: block;
+}
+#participatePie{
+    padding:0 20px;
+    height: 340px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    z-index: 5;
+    display: block;
+}
+
+/*作业统计*/
+#D-work{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 55px;
+    background: #e7edf2;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    opacity: 0;
+    z-index: 5;
+}
+#scoreChart{
+    height: 325px;
+    margin:0 20px;
+    display: block;
+}
+#CostTimeChart{
+    height: 325px;
+    margin:0 20px;
+    display: block;
+}
+/*知识点错误率*/
+#showChossText{
+    width: 100%;
+    height: 20px;
+    padding: 0 5px;
+    font-size: 12px;
+    border: 1px solid #dfdfdf;
+    position: relative;
+    top: 15px;
+    left: 220px;
+}
+#errorRate{
+     padding: 0 20px;
+     background: #fff;
+     /*padding-bottom: 20px;*/
+}
+.activeTitles{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e2e9f0;
+    line-height: 48px;
+}
+.errorTitleB{
+     font-size: 16px;
+    line-height: 49px;
+    color: black;
+}
+.e-activeSelect{
+    width: 100%;
+    height: 57px;
+    position: relative;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 7px 0 0;
+    vertical-align:middle;
+    background:url(../../../imgs/icon_radioOff.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url(../../../imgs/icon_radioOn.png) left top no-repeat;
+}
+.activeMore{
+    width: 85px;
+    height: 100%;
+    /*border: 1px solid red;*/
+    line-height: 55px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.activeSingle{
+    width: 85px;
+    height: 100%;
+    /*border: 1px solid red;*/
+    line-height: 55px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 95px;
+}
+.activeSelect label{
+    font-weight: 400 !important;
+}
+#e-object{
+    position: absolute;
+    top: 17px;
+    left: 185px;
+}
+#e-timeQuery{
+    position: relative;
+	left: 255px;
+	display: none;
+	margin-top: 17px;
+	width: 260px;
+	height: 27px;
+	margin-left: 30px;
+	display: inline-block;
+}
+.activechoose{
+    position: absolute;
+    top: 17px;
+    left:605px;
+    color: #999999;
+}
+.chooseTime{
+    width: 335px;
+    height: 24px;
+    border: 1px solid #dfdfdf;
+    border-radius:12px; 
+    cursor: pointer;
+    float: left;
+    margin-right:10px; 
+    display: none;
+}
+.Er-chooseTime{
+    width: 263px;
+}
+.chooseImg{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 4px;
+    left:8px;
+    background-image: url('../../../imgs/icon.png');
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -30px 0px;
+}
+.chossBox{
+    position: relative;
+    top: -11px;
+    left: 29px;
+    border: none;
+    width: 225px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.chossHint{
+    color: #dfdfdf;
+    /*display: none;*/
+}
+.ChossText{
+    display: none;
+    width: 235px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color: black;
+}
+.e-activeBtn{
+    width: 70px;
+    height: 24px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius:12px; 
+    float: left;
+    cursor: pointer;
+}
+.activeBtn:hover{
+    color: #fff;
+    background: #4aaaf4;
+}
+.ToggleChartBtn{
+    width: 70px;
+    height: 24px;
+    border: 1px solid #39c18c;
+    color: #39c18c;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius:12px;
+    cursor: pointer;
+    margin-left: 13px;
+    position: absolute;
+    top: 17px;
+    right: 0;
+}
+.ToggleChartBtn:hover{
+     color: #fff;
+     background: #39c18c;
+}
+.prohibitBtn{
+    width: 70px;
+    height: 24px;
+    background: #baf7e0;
+    border: 1px solid #baf7e0;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius:12px;
+    cursor: pointer;
+    margin-left: 13px;
+    position: absolute;
+    top: 17px;
+    right: 0;
+    display: none;
+}
+
+ /*选择作业弹出框*/
+ #selectBook{
+     display:none;
+     opacity:1;
+ }
+.selectBookCOnt{
+    width: 670px;
+    height: 465px;
+    border-radius:10px; 
+    margin-left:-335px;
+    margin-top: -232px; 
+}
+.selectBookClose{
+    margin-left:345px;
+    margin-top: -232px; 
+}
+.con-selectBook{
+    height: 347px;
+    
+}
+.tit-selectBook{
+    margin: 15px 20px 0;
+    background: #f4f7fa;
+    height: 36px;
+    width: 624px;
+    font-size: 14px;
+    line-height: 36px;
+}
+.tit-selectBook>div:nth-of-type(1){
+    width: 77%;
+    text-align: center;
+    float: left;
+}
+.tit-selectBook>div:nth-of-type(2){
+    width: 23%;
+    text-align: center;
+    float: left;
+}
+.selectBookUl{
+    width: 100%;
+    height: 297px;
+    overflow:auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.ul-selectBook{
+    margin-top:10px; 
+}
+.ul-selectBook>li{
+    margin: 0 20px;
+    padding: 0 10px;
+    height: 36px;
+    line-height: 35px;
+    position: relative;
+}
+.selectBookBtn{
+    width: 220px;
+    height: 36px;
+    border-radius:18px;
+    font-size: 16px;
+    line-height: 34px; 
+}
+.errorRateChartBox{
+    height: 310px;
+    display: block;
+    position: relative;
+}
+#errorRateChart{
+    width: 100%;
+    height: 310px;
+    display: block;
+}
+.errorRateListBox{
+    display: none;
+    position: relative;
+}
+#errorRateList{
+    width: 100%;
+    min-height:300px; 
+    /*display: none;*/
+}
+.ListHeade{
+    height: 35px;
+    background: #f4f7fa;
+    font-size: 14px;
+    line-height: 35px;
+}
+.ListUl>li{
+    height: 47px;
+    font-size: 14px;
+    line-height: 46px;
+    border-bottom: 1px solid #e2e9f0;
+    /*display: none;*/
+}
+.ListUl>li:hover{
+    background: #f6f8fc;
+}
+.ListUl>li:nth-last-of-type(1){
+    border-bottom: 0px solid ;
+}
+.knowLedge{
+    padding-left: 20px !important;
+}
+.errorRates{
+    padding-left: 40px !important;
+}
+ .wrongTimes{
+     padding-right: 20px !important;
+     padding-left: 0 !important;
+ }
+ .knowLedgeText{
+    padding-left: 20px !important;
+}
+.errorRatesText{
+     /*text-align: center;*/
+    padding-left: 45px !important;
+}
+ .wrongTimesText{
+     padding-left: 20px !important;
+ }
+.ch-time {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+/*电子课本统计*/
+#D-book{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 55px;
+    background: #e7edf2;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    opacity: 0;
+    z-index: 5;
+}
+.E-bookSub{
+    height: 422px;
+}
+#E-bookChart{
+    margin:0 20px;
+    height: 325px;
+    /*display: none;*/
+}
+#E-bookPie{
+    margin:0 20px;
+    height: 370px;
+    background: #fff;
+    /*display: none;*/
+}
+
+/*空数据的样式*/
+.Null{
+    margin: 0 20px;
+    text-align: center;
+    margin-top:7%; 
+    color: #999999;
+    font-size: 16px;
+    display: none;
+}
+.Null>img{
+    width: 160px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.Null-pateChart{
+    margin-top:9%;
+}
+.Null-patePie{
+    margin-top:9%;
+    display: none;
+}
+.null-bookPie{
+    margin-top:9%; 
+}
+.null-chart{
+    height: 300px;
+    margin-top:0; 
+    padding-top:85px; 
+}
+.null-list{
+    height: 300px;
+    margin-top:0; 
+    padding-top:85px; 
+}

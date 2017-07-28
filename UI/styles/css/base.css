@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	display: inline;
+	border: none;
+	cursor: pointer;
+}
+
+ul{
+	list-style:none;	
+}
+a{
+	text-decoration: none;
+	color: #000;
+}

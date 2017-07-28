@@ -1,0 +1,569 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author">
+        <title>我的资料</title>
+        <link rel="stylesheet" href="../css/S_material.css">
+        <link rel="stylesheet" href="../../../js/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../js/bootstrap/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="../../../css/pagination.css">
+        <script src="../../../js/jQuery.js"></script>
+        <script src="../../../js/cookie.js"></script>
+        <script src="../../../js/radialIndicator.js"></script>
+        <script src="../../../js/echarts.js"></script>
+        <script src="../../../js/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="../../../js/bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+		<script src="../../../js/jquery.pagination.js"></script>
+    </head>
+
+    <body>
+        <!--头部-->
+        <div class="f-header" >
+            <div class="f-center">
+                <div class="f-logo"></div>
+                <div class="s-login">
+                    <a href="S_message.html">
+                        <div class="s-Lmessage">
+                        	<!-- 此处带入className on 小红点显示有新消息;否则不显示无新消息 -->
+                            <span class="s-LImg on"><i class="s-LImgDot"></i></span>
+                            <span class="f-LText">我的消息</span>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="s-Rmessage">
+                            <span class="s-RImg"></span>
+                            <span class="f-RText">退出</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--内容部分-->
+        <div class="f-content">
+            <!--左边-->
+            <div class="f-Lcontent">
+                <!--头像-->
+                <div class="f-UserBox">
+                    <div class="f-UserImg">
+                        <img src="../../../imgs/TouXiang.png">
+                    </div>
+                    <div class="f-SetImg"></div>
+                    <div class="f-UserName"></div>
+                </div>
+                <!--菜单栏-->
+                <div class="f-UserNav">
+                    <ul class="f-NavUl">
+                        <li id='f-zhuomian'>
+                            <a href="S_index.html">
+                                <div class="f-zhuomian" data-class='f-zhuomian'>
+                                    <div class="f-zhuomainBox">
+                                        <img src="../../../imgs/zhuomian.png">
+                                    </div>
+
+                                    <span>我的桌面</span>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li id="f-banji">
+                            <a href="S_management.html">
+                                <div class="f-banji" data-class='f-banji'>
+                                    <div class="f-banjiBox">
+                                        <img src="../../../imgs/banji.png">
+                                    </div>
+                                    <span>我的班级</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-zuoye'>
+                            <a href="#">
+                                <div class="f-zuoye" data-class='f-zuoye'>
+                                    <div class="f-zuoyeBox">
+                                        <img src="../../../imgs/zuoye.png">
+                                    </div>
+
+                                    <span>我的作业</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-ziliao'>
+                            <a href="S_material.html">
+                                <div class="f-ziliao" data-class='f-ziliao'>
+                                    <div class="f-ziliaoBox">
+                                        <img src="../../../imgs/ziliao.png">
+                                    </div>
+
+                                    <span>我的资料</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-shuju'>
+                            <a href="S_dataCenter.html">
+                                <div class="f-shuju" data-class='f-shuju'>
+                                    <div class="f-shujuBox">
+                                        <img src="../../../imgs/shuju.png">
+                                    </div>
+
+                                    <span>数据中心</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-gongju'>
+                            <a href="S_tools.html">
+                                <div class="f-gongju" data-class='f-gongju'>
+                                    <div class="f-gongjuBox">
+                                        <img src="../../../imgs/gongju.png">
+
+                                    </div>
+
+                                    <span>学习工具</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-sideBox">
+                    <img src="../../../imgs/smallIcon.png">
+                </div>
+            </div>
+            <!--右边-->
+            <div class="f-Rcontent">
+                <div class="G-Head">
+                    <ul class="G-HeadUl">
+                        <li data-id="gradeTab" class="choose">成绩单</li>
+                        <li data-id="applyTab">奖章</li>
+                        <li data-id="otherTab">其他</li>
+                    </ul>
+                </div>
+                <div class="G-body">
+                	<!-- 成绩单 -->
+                    <div id="gradeTab" class="gBodytabCon">
+                    	<div class="tabCon-head clearfix">
+                        	<div class="G-class select-subject">
+                                <select class="G-classBox" id="grade_subject">
+                                    <!-- <option value="">全部学科</option>
+                                    <option value="13">语文</option>
+                                    <option value="14">数学</option>
+                                    <option value="15">英文</option>  --> 
+                                </select>
+                           </div>
+                            <div class="activechoose ac-activechoose">
+                                <div class="activeBtn" id="grade_query">查询</div>
+                            </div>
+                           	<div class="timeQuery">
+                                <div class="input-group date form_date startTime" data-date="" data-date-format="yyyy-mm-dd">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="sTime_grade" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                                <span class="timeInfix">至</span>
+                                <div class="input-group date form_date endTime" data-date="" data-date-format="yyyy-mm-dd">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="eTime_grade" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabCon-body">
+							<div class="cont-gradeTab">
+								<div class="loadingTips hasHead" id="grade_loading" style="position: absolute;left:0px;top:200px;"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+								<div class="bodyBox-list clearfix" id="grade_box">
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单1</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">第四周语文文言文作业成绩单</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+								</div>
+								<!-- <div class="m-page">
+									<div class="m-pageCont">
+										<ul class="pagination myPaginationL" id="pageTool"><li><a>«</a></li><li><a>1</a></li><li><a>2</a></li><li><a>»</a></li></ul>
+										<div class="myPaginationR">
+											<div class="m-pageInput">
+												<input type="text" maxlength="6" id="pageIndex">
+											</div>
+											<div class="m-pageText" id="jumpTo">跳转</div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+							
+                    		<div class="seatCon-null" id="grade_null" style="display: none;">
+	                    		<div class="nullSeat-img"><img src="../../../imgs/messageNull.png" /></div>
+	                    		<div class="nullSeat-text">暂无成绩单</div>
+	                    	</div>
+                        </div>
+						
+						<!--分页-->
+                        <div id="gradePagination" class="paginationBox clearfix" style="padding-right: 20px;"></div>
+                    </div>
+                    <!-- 奖章 -->
+                    <div id="applyTab" class="gBodytabCon">
+                    	<div class="tabCon-head clearfix">
+                        	<div class="G-class select-subject">
+                                <select class="G-classBox" id="medal_subject">
+                                    <option value="">全部学科</option>
+                                    <option value="13">语文</option>
+                                    <option value="14">数学</option>
+                                    <option value="15">英文</option>  
+                                </select>
+                           </div>
+                            <div class="activechoose ac-activechoose">
+                                <div class="activeBtn" id="medal_query">查询</div>
+                            </div>
+                           	<div class="timeQuery">
+                                <div class="input-group date form_date startTime" data-date="" data-date-format="yyyy-mm-dd">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="sTime_medal" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                                <span class="timeInfix">至</span>
+                                <div class="input-group date form_date endTime" data-date="" data-date-format="yyyy-mm-dd">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="eTime_medal" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabCon-body">
+							<div class="cont-applyTab">
+								<div class="loadingTips hasHead" id="medal_loading" style="position: absolute;left:0px;top:200px;z-index:10"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+								<div class="bodyBox-list clearfix" id="medal_box">
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+									<div class="boxList-line">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+										<div class="list-done">
+											<div class="doneA">得分：56</div>
+											<div class="doneB">
+												<i class="icon-material2 icon-sun"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-moon"></i><i class="icon-material2 icon-chen"></i><span>2
+												</span><i class="icon-material2 icon-star"></i><i class="icon-material2 icon-chen"></i><span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="m-page">
+									<div class="m-pageCont">
+										<ul class="pagination myPaginationL" id="pageTool"><li><a>«</a></li><li><a>1</a></li><li><a>2</a></li><li><a>»</a></li></ul>
+										<div class="myPaginationR">
+											<div class="m-pageInput">
+												<input type="text" maxlength="6" id="pageIndex">
+											</div>
+											<div class="m-pageText" id="jumpTo">跳转</div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+                    		<div class="seatCon-null" id="medal_null" style="display: none;">
+	                    		<div class="nullSeat-img"><img src="../../../imgs/messageNull.png" /></div>
+	                    		<div class="nullSeat-text">暂无奖章</div>
+	                    	</div>
+                        </div>
+                        
+                        <!--分页-->
+                        <div id="applyPagination" class="paginationBox clearfix" style="padding-right: 20px;"></div>
+                    </div>
+                    <!-- 其他 -->
+                    <div id="otherTab" class="gBodytabCon">
+                    	<div class="tabCon-head clearfix">
+                        	<div class="G-class select-subject">
+                                <select class="G-classBox" id="other_subject">
+                                    <option value="">全部学科</option>
+                                    <option value="13">语文</option>
+                                    <option value="14">数学</option>
+                                    <option value="15">英文</option>  
+                                </select>
+                           </div>
+                            <div class="activechoose ac-activechoose">
+                                <div class="activeBtn" id="other_query">查询</div>
+                            </div>
+                           	<div class="timeQuery">
+                                <div class="input-group date form_date startTime" data-date="" data-date-format="yyyy-mm-dd">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="sTime_other" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                                <span class="timeInfix">至</span>
+                                <div class="input-group date form_date endTime" data-date="" data-date-format="yyyy-mm-dd">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="eTime_other" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabCon-body">
+							<div class="cont-otherTab">
+								<div class="loadingTips hasHead" id="other_loading" style="position: absolute;left:0px;top:200px;"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+								<div class="bodyBox-list clearfix" id="other_box">
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+									<div class="boxList">
+										<div class="list-name">汉语拼音（ang eng ing ong)课程截图</div>
+										<div class="list-done">
+											<a href="javascript:;" class="icon-material2 icon-download" title="下载"></a>
+										</div>
+										<div class="list-info"><span class="info-time">发布者：蒋教师</span><span class="info-size">发布时间：2017年3月13日 13:00</span></div>
+									</div>
+								</div>
+					<!-- 			<div class="m-page">
+									<div class="m-pageCont">
+										<ul class="pagination myPaginationL" id="pageTool"><li><a>«</a></li><li><a>1</a></li><li><a>2</a></li><li><a>»</a></li></ul>
+										<div class="myPaginationR">
+											<div class="m-pageInput">
+												<input type="text" maxlength="6" id="pageIndex">
+											</div>
+											<div class="m-pageText" id="jumpTo">跳转</div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+                    		<div class="seatCon-null" id="other_null" style="display: none;">
+	                    		<div class="nullSeat-img"><img src="../../../imgs/messageNull.png" /></div>
+	                    		<div class="nullSeat-text">暂无资料</div>
+	                    	</div>
+                        </div>
+                        
+                        <!--分页-->
+                        <div id="otherPagination" class="paginationBox clearfix" style="padding-right: 20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
+<link rel="stylesheet" href="../../../css/myCss.css">
+<script src="../../../js/myJs.js" type="text/javascript"></script>
+<script src="../js/S_material.js" type="text/javascript"></script>
+<script src="../js/S_material_interface.js" type="text/javascript"></script>

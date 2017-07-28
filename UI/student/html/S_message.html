@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" >
+        <title>我的消息</title>
+        <link rel="stylesheet" href="../css/S_message.css">
+		<link rel="stylesheet" href="../../../js/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../js/bootstrap/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="../../../css/pagination.css">
+        <script src="../../../js/jQuery.js"></script>
+        <script src="../../../js/cookie.js"></script>
+        <script src="../../../js/radialIndicator.js"></script>
+        <script src="../../../js/echarts.js"></script>
+       	<script src="../../../js/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/bootstrap/js/bootstrap-datetimepicker.js"></script>
+		<script src="../../../js/bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+		<script src="../../../js/jquery.pagination.js"></script>
+    </head>
+    <body>
+        <!--头部-->
+        <div class="f-header" >
+            <div class="f-center">
+                <div class="f-logo"></div>
+                <div class="s-login">
+                    <a href="S_message.html">
+                        <div class="s-Lmessage">
+                        	<!-- 此处带入className on 小红点显示有新消息;否则不显示无新消息 -->
+                            <span class="s-LImg on"><i class="s-LImgDot"></i></span>
+                            <span class="f-LText">我的消息</span>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="s-Rmessage">
+                            <span class="s-RImg"></span>
+                            <span class="f-RText">退出</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--内容部分-->
+        <div class="f-content">
+            <!--左边-->
+            <div class="f-Lcontent">
+                <!--头像-->
+                <div class="f-UserBox">
+                    <div class="f-UserImg">
+                        <img src="../../../imgs/TouXiang.png" >
+                    </div>
+                    <div class="f-SetImg"></div>
+                    <div class="f-UserName"></div>
+                </div>
+                <!--菜单栏-->
+                <div class="f-UserNav">
+                    <ul class="f-NavUl">
+                        <li id='f-zhuomian'>
+                            <a href="S_index.html">
+                                <div class="f-zhuomian" data-class='f-zhuomian'>
+                                    <div class="f-zhuomainBox">
+                                        <img src="../../../imgs/zhuomian.png">
+                                    </div>
+
+                                    <span>我的桌面</span>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li id="f-banji">
+                            <a href="S_management.html">
+                                <div class="f-banji" data-class='f-banji'>
+                                    <div class="f-banjiBox">
+                                        <img src="../../../imgs/banji.png">
+                                    </div>
+                                    <span>我的班级</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-zuoye'>
+                            <a href="#">
+                                <div class="f-zuoye" data-class='f-zuoye'>
+                                    <div class="f-zuoyeBox">
+                                        <img src="../../../imgs/zuoye.png">
+                                    </div>
+
+                                    <span>我的作业</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-ziliao'>
+                            <a href="S_material.html">
+                                <div class="f-ziliao" data-class='f-ziliao'>
+                                    <div class="f-ziliaoBox">
+                                        <img src="../../../imgs/ziliao.png">
+                                    </div>
+
+                                    <span>我的资料</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-shuju'>
+                            <a href="S_dataCenter.html">
+                                <div class="f-shuju" data-class='f-shuju'>
+                                    <div class="f-shujuBox">
+                                        <img src="../../../imgs/shuju.png">
+                                    </div>
+
+                                    <span>数据中心</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-gongju'>
+                            <a href="S_tools.html">
+                                <div class="f-gongju" data-class='f-gongju'>
+                                    <div class="f-gongjuBox">
+                                        <img src="../../../imgs/gongju.png">
+
+                                    </div>
+
+                                    <span>学习工具</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-sideBox">
+                    <img src="../../../imgs/smallIcon.png" >
+                </div>
+            </div>
+            <!--右边-->
+            <div class="f-Rcontent">
+              
+                	<!--右边-->
+				<div class="s-Rcontent">
+					<!-- 消息导航条 -->
+					<div class="m-header">
+						<div class="m-nav">
+							我的消息
+						</div>
+					</div>
+					
+					<!-- 消息div -->
+					<div class="m-table" id="m-table">
+						<!-- 工具栏 -->
+						<div class="m-toolbox">
+							<div class="radio-group">
+								<div class="radio-inline">
+									<input type="radio" name="sel-type" value="time" id="Time" checked>
+									<label for="Time"><span></span>日期</label>
+								</div>
+								<!--<a href="javascript:void(0)" onclick="parent.window.showDiv()">查看</a> -->
+								<div class="radio-inline">
+									<input type="radio" name="sel-type" value="keyWord" id="keyword">
+									<label for="keyword"><span></span>关键词</label>
+								</div>
+							</div>
+							<input type="text" placeholder="请输入关键词" class="form-control keyWord" id="keyWordQuery" />
+							<div id="timeQuery">
+								<div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" id="startTime">
+									<input class="form-control aa" size="16" type="text" value="" id="s-Time" readonly>
+									<span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+								<span class="timeInfix">至</span>
+								<div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" id="endTime">
+									<input class="form-control aa" size="16" type="text" value="" id="e-Time" readonly>
+									<span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+							</div>
+							<div class="m-query" id="m-query">
+								查询
+							</div>
+						</div>
+						<!-- 消息列表 -->
+						<div class="m-list">
+                            <div class="loadingTips hasHead" id="messageLoading" style="position: absolute;left:0px;top:300px;"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+							<div class="m-listBody" id="m-listBody" style="display: block;">
+								<!-- <li class="no-read">
+									<div class="m-listCont">
+										<h4 >明日作业准备工作</h4>
+										<p >当今世界变化速度越来越快,未来将面临的竞争和挑战将越来越严苛 ,品格教育对孩子们的人生发展,将有着决定性的作用.因为充满挑战的二十
+										</p>
+										<div>
+											发布者：<span>江老师</span>  发布时间：<span>2016年10月11日</span> <span>13:22</span>
+										</div>
+									</div>
+									<i class="point-sign"></i>
+								</li> -->
+							</div>
+							
+							<!--分页-->
+                            <div id="messagePagination" class="paginationBox clearfix"></div>
+							<!-- <div class="m-page">
+                                <div class="m-pageCont">
+                                    <ul class="pagination myPaginationL" id="pageTool">
+
+                                    </ul>
+                                    <div class="myPaginationR">
+                                        <div class="m-pageInput">
+                                            <input type="text" maxlength="6" id="pageIndex">
+                                        </div>
+                                        <div class="m-pageText" id="jumpTo">跳转</div>
+                                    </div>
+                                </div>
+                            </div> -->
+							<div class="messageNull" id="messageNull">
+								<img src="../../../imgs/messageNull.png" >
+								<div class="messageNullText">暂无消息</div>
+							</div>
+						</div>
+					</div>
+					<!--详情div-->
+					<div class="messageDetail" id="messageDetail">
+						<div class="m-detail-header">
+                            <h4 class="header" id="header">明日作业准备工作</h4>
+                            <p class="publish-detail" id="publish-detail">发布者:蒋教师 发布时间:2017年5月15日 13:00</p>
+                        </div>
+                        <div class="m-detail-content">
+                            <p class="content" id="content">社保基金属于“国家战略储备钱”，由中央财政预算拨款、国有资本划转、 基金投资收益等资金构成，这与由用人单位、个人缴费构成的社会保险基金不同。 虽然不是老百姓自己交的钱，但仍堪称民生领域的“定心丸”。今年以来，基本养老金市场化运营 进入了实质性操作的阶段。人社部数据显示，截至3月底，北京、上海、河南、湖北、 广西、云南、陕西等7个省(区、市)政府与社保基金会签署了委托投资合同，合同总金额3600亿元， 其中1370亿元资金已经到账并开始投资，其他资金将按合同约定分年、分批到位。
+                            </p>
+                        </div>
+					</div>
+				</div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+<link rel="stylesheet" href="../../../css/myCss.css">
+<script src="../../../js/myJs.js"></script>
+<script src="../js/S_message.js"></script>
+<script src="../js/S_message_interface.js"></script>

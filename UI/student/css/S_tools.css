@@ -1,0 +1,31 @@
+#f-gongju{border-left: 4px solid #4aaaf4;background-color: #f3f4f9;}
+/* tab导航 */
+.G-Head{width: 100%;height: 40px;background: #fff;position: relative;}
+.G-HeadUl{height: 40px;width: 100%;}
+.G-HeadUl>li{width: 110px;margin: 0 10px;text-align: center;float: left;
+	font-size: 16px;line-height: 40px;color: #999;cursor:pointer;}
+.G-HeadUl>li:first-child{color: #4aaaf4;border-bottom: 2px solid #4aaaf4;}
+/* tab内容块 */
+.G-body{padding: 20px 20px 0;}
+.G-body .gBodytabCon{background-color: #FFF;min-height: 655px;display: none;}
+/*==================== 应用 ====================*/
+.G-body #applyTab{display: block;}
+.tabCon-body{padding: 5px 20px;position: relative;}
+/* 应用列表 */
+.boxList-commend{width: -moz-calc(33.3333% - 14px);width: -webkit-calc(33.3333% - 14px);width: calc(33.3333% - 14px);
+	float: left;margin-right: 21px;margin-top: 15px;border: 1px solid #e2e9f0;padding: 20px 14px;position: relative;}
+.boxList-commend:nth-child(3n){margin-right: 0;}
+.boxList-commend .appImg{float: left;margin-left: 8px;width: 68px;height: 68px;border-radius: 5px;overflow: hidden;}
+.boxList-commend .appImg img{width: 100%;height: 100%;}
+.boxList-commend .list-name{line-height: 22px;font-size: 16px;color: #000;padding-left: 86px;}
+.boxList-commend .list-info{position: absolute;left: 0;bottom: 20px;padding-right: 14px;padding-left: 100px;
+	font-size: 14px;line-height: 16px;color: #999;text-align: justify;}
+.boxList-commend .list-done{position: absolute;right: 14px;top: 19px;}
+.boxList-commend .list-done .doneBtn{display: block;width: 60px;height: 24px;line-height: 22px;text-align: center;
+	border: 1px solid #4aaaf4;color: #4aaaf4;background: #fff;border-radius: 12px;}
+.boxList-commend .list-done .doneBtn:hover{color: #fff;background:  #4aaaf4;}
+/* 暂无应用 */
+.seatCon-null{padding-top: 186px;}
+.seatCon-null .nullSeat-img{width: 240px;margin: 0 auto;}
+.seatCon-null .nullSeat-img img{width: 100%;height: auto;}
+.seatCon-null .nullSeat-text{width: 100%;height: 36px;line-height: 36px;font-size: 16px;color: #999;text-align: center;}

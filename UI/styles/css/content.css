@@ -1,0 +1,234 @@
+.container{
+	width: 1180px;
+/*	height: 4800px;*/
+/*	height: auto;*/
+	margin: 0 auto;
+/*	overflow: hidden;*/
+	padding-top: 20px;
+}
+.container:after{
+		content:"."; display:block; height:0; font-size:0; clear:both; visibility:hidden;
+}
+.container .left{
+	float: left;
+	width: 860px;
+/*	height: 1168px;*/
+}
+.container .left .book{
+	height: 416px;
+	border: 1px solid #d2d2d2;
+/*	margin: 20px;	*/
+/*	margin-bottom: 20px;*/
+}
+.container .left .book .carousel{
+	float: left;	
+	height: 416px;
+	width: 570px;
+	border-right: 1px solid #d2d2d2; 
+}
+.container .left .book .unscramble{
+	float: left;
+/*	width: 248px;
+	height: 379px;*/
+	padding: 0px 10px 0px 25px;
+}
+.container .left .book .unscramble img{
+	width: 240px;
+	height: 156px;
+}
+.container .left .book .unscramble h3{
+	width: 238px;
+	height: 18px;
+	padding: 10px 0 12px 0;
+/*	font: 18px "黑体",STHeiti;*/
+}
+.container .left .course{
+	margin: 20px 0 20px 0;
+	width: 860px;
+	height: 435px;
+	border: 1px solid #d2d2d2;
+}
+.container .left .course .item{
+	float: left;
+	width: 250px;
+	height: 405px;
+/*	border: 1px solid #d2d2d2;*/
+	border-left: 1px solid #d2d2d2;
+	padding: 20px 17px 10px 17px;
+}
+.container .left .course .item img{
+	width: 248px;
+	height: 157px;
+	margin: 16px 0;
+}
+.container .left .course .item select{
+	float: right;
+	border: 3px solid #d2d2d2;
+	width: 125px;
+	height: 25px;
+	background-color:#ffffff;
+}
+.container .left .course .item ul li{
+/*	height: 50px;*/
+	font: 16px/24px "HiraginoSansGB";
+	padding: 12px 0 12px 0;
+}
+.container .left .course .item ul li + li{
+	border-top: 1px solid #d2d2d2; 
+}
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #000;
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url("../img/未标题-10.jpg") no-repeat scroll right center transparent;
+
+
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+
+.container .left .course .item:first-child{
+	background-color: #5baff7;
+	color: #ffffff;
+}
+.container .left .course .item:first-child select{
+		border: 2px solid #ffffff;
+		background-color:#5baff7;
+}
+
+
+.container .left .editor{
+/*	padding: 20px;*/
+	margin: 20px 0 20px 0;
+	width: 860px;
+	height: 275px;
+	border: 1px solid #d2d2d2; 
+}
+.container .left .editor .item1{
+	padding: 20px;
+	width: 530px;
+/*	height: 232px;*/
+	float: left;
+	border-right: 1px solid #d2d2d2;
+}
+.container .left .editor .item1 .img {
+	float: left;
+	height: 235px;
+	width: 180px;
+	border-right: 1px solid #d2d2d2;
+	text-align: center;
+}
+.container .left .editor .item1 .img img{
+	border: 1px solid #999999;
+	border-radius:50%;
+	padding: 7px;
+}
+.container .left .editor .item1 .img span{
+	display: block;
+	margin-top: 10px;
+}
+.container .left .editor .item1 .intro{
+	float: left;
+	width: 321px;
+	padding: 0px 0 29px 28px;
+	overflow: hidden;
+}
+.container .left .editor .item1 .intro p{
+	float: left;
+	font: 14px/1.5em "HiraginoSansGB";
+}
+.container .left .editor .item1 .intro span{
+	font: bold 18px/1.5em "HiraginoSansGB";
+}
+.container .left .editor .item2{
+	float: left;
+	padding: 16px 15px 24px 25px;
+}
+.container .left .editor .item2 span{
+	font: bold 18px/1.5em "HiraginoSansGB";
+}
+.container .left .editor .item2 table{
+/*	float: left;*/
+}
+.container .left .editor .item2 td{
+	height: 25px;
+	width: 59px;
+	font: 14px "HiraginoSansGB";
+}
+.container .right{
+	float: right;
+	width: 300px;
+	height: 1170px;
+	border: 1px solid #d2d2d2;
+}
+.container .right .notice{
+	height: 620px;
+}
+.container .right .notice div{
+	height: 20px;
+	padding: 10px 10px 10px 20px;
+	border-bottom: 1px solid #d2d2d2;
+	font:bold 18px/1.5em "HiraginoSansGB";
+/*	font:  24px arial,sans-serif;
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu*/
+}
+.container .right .notice .content{
+	height: 540px;
+	padding: 20px;
+	border-bottom: 1px solid #d2d2d2;	
+}
+.container .right .notice img{
+	height: 170px;
+	width: 260px;
+	margin-bottom: 15px;
+}
+.container .right .report{
+	height: 550px;
+}
+.container .right .report .title{
+	height: 20px;
+	padding: 10px 10px 10px 15px;
+	border-top: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d2d2d2;  
+	font: bold 18px/20px arial,sans-serif;
+}
+.container .right .report .content{
+	height: 507px;
+	padding: 0 15px 0 15px;	
+}
+.container .right .report .content ul{
+		list-style:none;
+}
+.container .right .report .content ul li{
+/*	height: 50px;*/
+	word-break:break-all;word-wrap:break-word;
+	padding: 14px 0 14px 0;
+	font: 14px/21px "HiraginoSansGB";
+	color: #999999;
+	border-bottom: 1px solid #d2d2d2;	
+/*	display: table-cell;
+	vertical-align: middle;*/
+}
+/*.container .right .report .content ul li + li{
+	border-bottom: 1px solid #d2d2d2;	
+}*/
+/*轮播样式*/
+/*  .viewport {width: 944px;height:283px;position: relative;overflow: hidden;}
+  .father {width:570px; height:416px; padding: 20px 0;box-sizing: border-box;transition: transform 0.6s ease-in-out;transform: translate3d(0,0,0);background: #ff5252;}
+  .father.moving {transition-duration: 0s;}
+  .father > div {width: 432px;height: 243px;margin: 0 20px;opacity:0.6;transition: all 0.6s ease-in-out;background: #2dbe60;float: left;}
+  .father.moving > div {transition-duration: 0s;}
+  .father > div.showing {opacity: 1;transform: scale3d(1.1, 1.1, 1);}
+
+  .leftPic, .rightPic {width: 30px;height: 100%;line-height: 283px;user-select:none;text-align: center;cursor: pointer;background: rgba(0,0,0,0.15);position: absolute;top: 0;}
+  .leftPic {left: 0;} .rightPic {right: 0;}*/
+  

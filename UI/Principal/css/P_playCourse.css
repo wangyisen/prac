@@ -1,0 +1,388 @@
+#f-zhuomian{
+    border-left: 4px solid #4aaaf4;
+    background-color: #f3f4f9;
+}
+.f-NavUl > li > a > div{
+    left: -5px;
+    width: 100%;
+    padding: 0 0 0 20px ;
+}
+.f-NavUl > li > a > div > span{
+    margin-left:45px; 
+}
+/**/
+.f-Rmessage{
+    float: right;
+}
+.f-Lmessage{
+    float: right;
+    color: black;
+    padding-top: 14px;
+    margin-right: 15px;
+}
+.selectBox{
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    background: #ffffff;
+     border-radius:13px; 
+}
+#area{
+    width: 90px;
+    background-position: 70px 8px;
+}
+#campus{
+    width: 150px;
+    background-position: 130px 8px;
+}
+select{
+    height: 25px;
+    padding-left: 9px;
+    border: solid 1px #dfdfdf;
+    border-radius:13px; 
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    /*background-position: 0px 8px;*/
+    font-size:12px;
+    line-height: 24px;
+    cursor: pointer;
+}
+#area:hover{
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 70px 8px;
+}
+#campus:hover{
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position: 130px 8px;
+}
+select::-ms-expand { 
+    display: none;
+ }
+
+/*------------------*/
+.A-head{
+    width: 100%;
+    height: 40px;
+    background: #ffffff;
+    position: relative;
+}
+.A-headText{
+    width: 110px;
+    color: #4aaaf4;
+    height: 40px;
+    font-size: 16px;
+    line-height: 38px;
+    text-align: center;
+    border-bottom: 2px solid #4aaaf4;
+    position: absolute;
+    left: 20px;
+}
+.A-headCont{
+    height: 40px;
+    position: absolute;
+    right: 20px;
+}
+
+
+
+
+/*下拉框*/
+.A-selectBox{
+    width: 90px;
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.A-selectBox select{
+    width: 100%;
+     background-position: 70px 8px;
+}
+.A-selectBox select:hover{
+    background: url(../../../imgs/subscript.png) no-repeat scroll right center transparent;
+    background-position:70px 8px;
+    border: 1px solid #4aaaf4;
+}
+/*天radio*/
+.A-dayRadio{
+    /*width: 50px;*/
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.A-TimeRadio{
+    float: right;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 7px 0 0;
+    vertical-align:middle;
+    background:url(../../../imgs/icon_radioOff.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url(../../../imgs/Icon_radio_on.png) left top no-repeat;
+}
+.calendarBox{
+    float: right;
+    /*border: 1px solid red;*/
+    padding-top:7px; 
+}
+.nowTime{
+    display: block;
+}
+#nowTime{
+    width: 135px;
+    height: 25px;
+}
+.lengthTime{
+    position: relative;
+    width: 300px;
+    /*display: none;*/
+}
+#startTime{
+    width: 135px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#nowTime{
+    width: 135px;
+    height: 25px;
+}
+.timeInfix{
+    position: absolute;
+    left: 140px;
+    top: 0;
+}
+#endTime{
+    width: 135px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#timeQuery {
+	position: relative;
+	left: 155px;
+	display: none;
+	margin-top: 17px;
+	width: 260px;
+	height: 27px;
+	margin-left: 30px;
+	display: inline-block;
+}
+#startTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+#nowTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+#endTime {
+	position: absolute;
+	left: 170px;
+	width: 135px;
+}
+
+#endTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+
+.aa {
+	padding-left: 15px !important;
+	padding-right: 0px !important;
+	height: 25px;
+}
+
+.bb {
+	border: 1px solid #dfdfdf;
+	border-top-right-radius: 20px !important;
+	border-bottom-right-radius: 20px !important;
+	padding-left: 8px !important;
+	padding-top: 3px !important;
+    padding-right: 9px !important;
+    padding-bottom: 5px  !important;
+}
+.timeInfix {
+	position: absolute;
+	top: 3px;
+	left: 146px;
+	color: #8e8e8e;
+}
+.imgBox{
+    position: relative;
+    top: 3 !important;
+}
+.queryBtn{
+    float: right;
+    width: 70px;
+    height: 24px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    font-size:12px;
+    text-align: center;
+    border-radius:13px; 
+    line-height: 22px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+.queryBtn:hover{
+    color: #ffffff;
+    background: #4aaaf4;
+}
+/*内容部分*/
+.A_body{
+    padding: 20px;
+    background: #e7edf2;
+}
+.P_cont{
+    /*border: 1px solid red;*/
+    width: 100%;
+    background: #ffffff;
+}
+.P_title{
+    position: relative;
+    margin:0 20px;
+    height: 50px;
+    border-bottom:1px solid #e2e9f0; 
+}
+.P_titleText{
+    font-size: 16px;
+    height: 50px;
+    line-height: 49px;
+    font-weight: 600;
+}
+.P_titleCont{
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
+.P_titleCont>div{
+    float: right;
+}
+.P_btn{
+    width: 130px;
+    height: 30px;
+    border: 1px solid #999999;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #999999;
+    margin: 3px 0 10px 10px;
+}
+
+.P_btn.on{
+    color: #39c18c;
+    background: #FFF;
+    border: 1px solid #39c18c;
+}
+.P_btn:hover{
+    color: #ffffff;
+    background: #39c18c;
+    border: 1px solid #39c18c;
+}
+.P_queryBtn{
+    margin: 6px 5px 13px 10px;
+}
+.class{
+    margin: 6px 0px 13px 10px;
+    display: none;
+}
+.allClass{
+    margin: 6px 0px 13px 10px;
+    display: none;
+}
+.object{
+    margin: 6px 0px 13px 10px;
+    display: block;
+}
+.Content{
+    width: 100%;
+    height: 318px;
+    position: relative;
+}
+#one{
+    height: 318px;
+    opacity: 0;
+}
+#two{
+    height: 318px;
+     opacity: 0;
+}
+#three{
+    height: 318px;
+     opacity: 0;
+}
+.chartBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 318px;
+    z-index: 0;
+}
+#grade{
+    opacity: 1;
+    z-index: 10;
+}
+.null{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    padding-top: 90px;
+    text-align: center;
+    color: #999999;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.null>img{
+    width: 160px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.pieCont{
+    width: 100%;
+    height: 318px;
+    position: relative;
+}
+.pieBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    height: 365px;
+}
+#pieChart{
+    height: 365px;
+    opacity: 1;
+}

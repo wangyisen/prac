@@ -1,0 +1,197 @@
+.icon-material2{display: inline-block;vertical-align: top;background-repeat: no-repeat;
+	background-image: url(../../../imgs/icon-material2.png);
+}
+#f-ziliao{border-left: 4px solid #4aaaf4;background-color: #f3f4f9;}
+/* tab导航 */
+.G-Head{width: 100%;height: 40px;background: #fff;position: relative;}
+.G-HeadUl{height: 40px;width: 100%;}
+.G-HeadUl>li{width: 110px;margin: 0 10px;text-align: center;float: left;
+	padding: 0 20px;font-size: 16px;line-height: 40px;color: #999;cursor:pointer;}
+.G-HeadUl>li:first-child{color: #4aaaf4;border-bottom: 2px solid #4aaaf4;}
+/* tab内容块 */
+.G-body{padding: 20px 20px 0;}
+.G-body .gBodytabCon{background-color: #FFF;min-height: 655px;display: none;}
+.G-body #gradeTab{display: block;}
+/* tabqie切换头部 */
+.tabCon-head{border-bottom: 1px solid #e2e9f0;}
+/* tab切换内容 */
+.tabCon-body{padding: 20px;}
+.cont-gradeTab{position: relative;}
+.cont-applyTab{position: relative;}
+.cont-otherTab{position: relative;}
+/* 成绩单列表 */
+.boxList{width: -moz-calc(50% - 10px);width: -webkit-calc(50% - 10px);width: calc(50% - 10px);
+	float: left;margin-right: 20px;margin-bottom: 15px;border: 1px solid #e2e9f0;padding: 15px 20px 20px 20px;}
+.boxList:nth-child(2n){margin-right: 0;}
+.boxList .list-name{float: left;line-height: 24px;font-size: 14px;color: #000;}
+.boxList .list-done{float: right;}
+.boxList .list-done .icon-download{width: 24px;height: 20px;background-position: 0 0;}
+.boxList .list-done .icon-download:hover{background-position: -25px 0;}
+.boxList .list-info{clear: left;font-size: 12px;line-height: 16px;color: #999;padding-top: 12px;}
+.boxList .list-info .info-time{margin-right: 18px;}
+.boxList .list-info .info-size{margin-right: 18px;}
+/* 奖章列表 */
+#applyTab .tabCon-body{padding: 0 20px 20px;}
+.boxList-line{width: 100%;border-bottom: 1px solid #e2e9f0;padding: 15px 5px;position: relative;}
+.boxList-line .list-name{float: left;line-height: 24px;font-size: 14px;color: #000;}
+.boxList-line .list-info{clear: left;font-size: 12px;line-height: 16px;color: #999;padding-top: 12px;}
+.boxList-line .list-info .info-time{margin-right: 18px;}
+.boxList-line .info-size{margin-right: 18px;}
+.boxList-line .list-done{position: absolute;right: 5px;top: 15px;text-align: right;}
+.boxList-line .list-done .doneA{line-height: 24px;font-size: 14px;color: #000;}
+.boxList-line .list-done .doneB{padding-top: 4px;}
+.doneB .icon-sun{width: 22px;height: 22px;background-position: 0 -25px;margin-left: 18px;}
+.doneB .icon-moon{width: 22px;height: 22px;background-position: -25 -25px;margin-left: 18px;}
+.doneB .icon-star{width: 22px;height: 22px;background-position: 0 -50px;margin-left: 18px;}
+.doneB .icon-chen{width: 10px;height: 10px;background-position: -25 -50px;margin: 7px 3px 0 3px;}
+.doneB span{display: inline-block;vertical-align: top;line-height: 24px;font-size: 14px;color: #000;}
+/* 暂无资料 */
+.seatCon-null{padding-top: 120px;}
+.seatCon-null .nullSeat-img{width: 240px;margin: 0 auto;}
+.seatCon-null .nullSeat-img img{width: 100%;height: auto;}
+.seatCon-null .nullSeat-text{width: 100%;height: 24px;line-height: 24px;font-size: 16px;color: #999;text-align: center;}
+/* 下拉选择 */
+.G-name{line-height: 24px;font-size: 14px;color: #000;}
+.G-class .G-classBox{appearance:none;-moz-appearance:none;-webkit-appearance:none;cursor: pointer;height: 24px;color: #000;
+    border: solid 1px #dfdfdf;border-radius:20px;padding: 2px 25px 2px 12px;font-size:12px;line-height: 18px;
+    background-image: url(../../../imgs/subscript.png);background-repeat: no-repeat;}
+.G-class .G-classBox:hover{border:1px solid  #5ecbf2;}
+.select-subject{display: block;float: left;margin: 13px 25px;}
+.select-subject .G-classBox{width: 100px;background-position: 75px 7px;}
+/*-------------------选择日期-----------------------*/
+.timeQuery {
+	position: relative;
+	display: none;
+	margin-top: 13px;
+	width: 305px;
+	height: 24px;
+	margin-left: 30px;
+	display: inline-block;
+	float: right;
+}
+.startTime{
+	position: absolute !important;;
+	width: 135px;
+}
+.startTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+.endTime {
+	position: absolute !important;
+	left: 170px;
+	width: 135px;
+}
+
+.endTime .aa:first-child {
+	border: 1px solid #dfdfdf !important;
+	background: #ffffff !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-right: 0px !important;
+	height: 24px !important;
+}
+
+.aa {
+	padding-left: 15px !important;
+	padding-right: 0px !important;
+	height: 25px;
+}
+
+.bb {
+	border: 1px solid #dfdfdf;
+	border-top-right-radius: 20px !important;
+	border-bottom-right-radius: 20px !important;
+	padding-left: 8px !important;
+	padding-top: 3px !important;
+    padding-right: 9px !important;
+    padding-bottom: 5px  !important;
+}
+.timeInfix {
+	position: absolute;
+	top: 3px;
+	left: 146px;
+	color: #8e8e8e;
+}
+.imgBox{
+    position: relative;
+    top: 3 !important;
+}
+/*----------------------------------------------------------------------------*/
+.activechoose{
+    float: right;
+    margin: 13px 20px 13px 14px;
+}
+.activeBtn{
+    width: 70px;
+    height: 24px;
+    border: 1px solid #4aaaf4;
+    color: #4aaaf4;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius:12px; 
+    float: left;
+    cursor: pointer;
+}
+
+/*跳转*/
+.m-page{
+	height: 75px;
+	display: block;
+}
+.m-pageCont{
+	position: relative;
+	width: 100%;
+}
+.pagination {
+	margin: 0 0;
+}
+.myPaginationL{
+	position: absolute ;
+	top: 0px;
+	right: 128px;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	border-right: 0px !important;
+}
+.myPaginationR{
+	height: 34px;
+	width: 109px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.m-pageInput{
+	width: 64px;
+	height: 34px;
+	border: 1px solid #ddd;
+	display: inline-block;
+}
+.m-pageInput>input{
+	height: 22px;
+	width: 48px;
+	margin-top: 6px;
+	margin-left: 6px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+.m-pageText{
+	width: 45px;
+	height:34px;
+	border: 1px solid #ddd;
+	border-left: 0;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	line-height: 34px;
+	font-size: 14px;
+	cursor:pointer;
+}

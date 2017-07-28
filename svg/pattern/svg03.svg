@@ -1,0 +1,1 @@
+<svg width="660" height="220" xmlns="http://www.w3.org/2000/svg"> <defs> <pattern id="pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"> <circle cx="10" cy="10" r="10" stroke="none" fill="#393" /> </pattern> </defs> <rect x="0" y="0" width="600" height="200" stroke="#630" stroke-width="5px" fill="url(#pattern)" /> </svg>

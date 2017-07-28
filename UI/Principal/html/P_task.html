@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit" />
+        <title>作业统计</title>
+		<link rel="stylesheet" href="../../../js/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../js/bootstrap/css/bootstrap-datetimepicker.min.css">
+		<link rel="stylesheet" href="../../../css/myCss.css">
+        <link rel="stylesheet" href="../css/P_task.css">
+        <script src="../../../js/jQuery.js"></script>
+        <script src="../../../js/radialIndicator.js"></script>
+        <script src="../../../js/echarts.js"></script>
+       	<script src="../../../js/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/bootstrap/js/bootstrap-datetimepicker.js"></script>
+		<script src="../../../js/bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    </head>
+    <body>
+       <!--头部-->
+        <div class="f-header" style="background:#3c8fec;">
+            <div class="f-center">
+                <div class="f-logo"></div>
+                <div class="f-login">
+                    <a>
+                        <div class="f-Rmessage">
+                            <span class="f-RImg"></span>
+                            <span class="f-RText">退出</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--内容部分-->
+        <div class="f-content">
+            <!--左边-->
+            <div class="f-Lcontent">
+                <!--头像-->
+                <div class="f-UserBox">
+                    <div class="f-UserImg">
+                        <img src="../../../imgs/TouXiang.png" >
+                    </div>
+                    <div class="f-SetImg"></div>
+                    <div class="f-UserName" id="f-UserName"></div>
+                </div>
+                <!--菜单栏-->
+                <div class="f-UserNav">
+                    <ul class="f-NavUl">
+                        <li id='f-zhuomian'>
+                            <a href="P_playCourse.html">
+                                <div class="f-zhuomian"  data-class='f-zhuomian'>
+                                    <div class="f-zhuomainBox">
+                                        <img src="../../../imgs/beiKe.png">
+                                    </div>
+                                
+                                    <span>备课中心统计</span>
+                            </div>
+                            </a>
+                           
+                        </li>
+                        <li id="f-banji">
+                            <a href="P_Interaction.html">
+                                 <div class="f-banji" data-class='f-banji'>
+                                    <div class="f-banjiBox">
+                                        <img src="../../../imgs/ketang.png">
+                                    </div>
+                                    <span>课堂互动统计</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-zuoye'>
+                            <a href="P_eBook.html">
+                                <div class="f-zuoye" data-class='f-zuoye'>
+                                    <div class="f-zuoyeBox">
+                                        <img src="../../../imgs/zuoye.png">
+                                    </div>
+                                
+                                    <span>电子课本统计</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li id='f-shuju'>
+                            <a href="P_task.html">
+                                <div class="f-shuju" data-class='f-shuju'>
+                                    <div class="f-shujuBox">
+                                        <img src="../../../imgs/task.png">
+                                    </div>
+                                    <span>作业统计</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="A-sideBox">
+                    <img src="../../../imgs/smallIcon.png" >
+                </div>
+            </div>
+            <!--右边-->
+            <div class="f-Rcontent">
+                 <!--头部-->
+                <div class="A-head">
+                    <!--左边-->
+                    <div class="A-headText">备课中心统计</div>
+                    <!--右边-->
+                    <div class="A-headCont">
+                        <div class="queryBtn" onclick="queryAllChart();">查询</div>
+                        <div class="calendarBox">
+                            <div class="nowTime">
+                                 <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" id="nowTime">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="Time" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                            </div>
+                           
+                            <div class="lengthTime">
+                                <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" id="startTime">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="s-Time" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                                <span class="timeInfix">至</span>
+                                <div class="input-group date form_date " data-date="" data-date-format="yyyy-mm-dd" id="endTime">
+                                    <input class="form-control aa" size="16px" type="text" value="" id="e-Time" readonly>
+                                    <span class="input-group-addon bb"><span class="glyphicon glyphicon-calendar imgBox"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="A-TimeRadio">
+                            <input type="radio" name="sel-type" value="length" id="length">
+                            <label for="length"><span></span>时间段</label>
+                        </div>
+                        <div class="A-dayRadio">
+                            <input type="radio" name="sel-type" value="single" id="singleday" checked />
+                            <label for="singleday"><span></span>天</label>
+                        </div>
+                    </div>
+                </div>
+                <!--内容部分-->
+                <div class="A_body">
+                      <!--第一个图表-->
+                   <div class="P_cont" style="border-bottom:1px solid #e2e9f0" >
+                       <!--标题-->
+                       <div class="P_title">
+                           <div class="P_titleText">发布作业量统计</div>
+                           <div class="P_titleCont">
+                               <div class="P_btn  teacher" onclick="showChart('teacher')">按教师统计</div>
+                               <div class="P_btn subject " onclick="showChart('subject')">按学科统计</div>
+                               <div class="P_btn myClass" onclick="showChart('myClass')">按班级统计</div>
+                               <div class="P_btn grade on" onclick="showChart('grade')">按年级统计</div>
+                               <div class="queryBtn P_queryBtn" onclick="queryPublishWorkCount();">查询</div>
+                               <div class="class A-selectBox">
+                                    <select id="gradeSel_class">
+                                    </select> 
+                               </div>
+                               <div class="allClass A-selectBox">
+                                    <select id="gradeSel_teacher">
+                                    </select> 
+                               </div>
+                               <div class="object A-selectBox">
+                                   <select id="subSel_work">
+                                    </select> 
+                               </div>
+                           </div>
+                       </div>
+                       <!--内容-->
+                       <div class="Content">
+                            <div class="chartBox" id="grade">
+                                <!--加载1-->
+                                <div class="loadingTips" id="grade_loading" style="position: absolute;left:0px;top:0px;z-index:1"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+                                <!--空数据1-->
+                                <div class="null" id="grade_null">
+                                    <img src="../../../imgs/columnNull.png" alt="">
+                                    <p>暂无数据</p>
+                                </div>
+                                <!--图表内容1-->
+                                <div id="one"></div>
+                            </div>
+                            <div class="chartBox" id="myClass">
+                                  <!--加载2-->
+                                <div class="loadingTips" id="class_loading" style="position: absolute;left:0px;top:0px;z-index:1"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+                                <!--空数据2-->
+                                <div class="null" id="class_null">
+                                    <img src="../../../imgs/columnNull.png" alt="">
+                                    <p>暂无数据</p>
+                                </div>
+                                <div id="two"></div>
+                            </div>
+                            <div class="chartBox" id="subject">
+                                  <!--加载3-->
+                                <div class="loadingTips" id="subject_loading" style="position: absolute;left:0px;top:0px;z-index:1"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+                                <!--空数据3-->
+                                <div class="null" id="subject_null">
+                                    <img src="../../../imgs/columnNull.png" alt="">
+                                    <p>暂无数据</p>
+                                </div>
+                                <div id="three"></div>
+                            </div>
+                            <div class="chartBox" id="teacher">
+                                  <!--加载4-->
+                                <div class="loadingTips" id="teacher_loading" style="position: absolute;left:0px;top:0px;z-index:1"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+                                <!--空数据4-->
+                                <div class="null" id="teacher_null">
+                                    <img src="../../../imgs/columnNull.png" alt="">
+                                    <p>暂无数据</p>
+                                </div>
+                                <div id="four"></div>
+                            </div>
+                       </div>
+                   </div>
+                   <!--第二个图表-->
+                   <div class="P_cont" style="margin-top:0px;">
+                        <div class="P_title" style="height:55px;">
+                            <div class="P_titleText" style="line-height: 54px;">知识点错误率</div>
+                           <div class="P_titleCont" style="padding-top:2px">
+                               <div class="triggerBtn" onclick="trigger()">切换图表</div>
+                               <div class="queryBtn" style="margin-left: 0px;" onclick="P_Task_Page.querySchoolErrorKnowledgeRate();">查询</div>
+                               <div class="A-selectBox">
+                                   <select id="subSel_error">
+                                    </select>
+                               </div>
+                               <div class="A-selectBox">
+                                   <select id="gradeSel_error">
+                                    </select>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="Rate">
+                             <div id="RateChartBox">
+                                <!--加载-->
+                                <div class="loadingTips" id="rateChart_loading" style="position: absolute;left:0px;top:0px;z-index:1"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+                                <!--空数据-->
+                                <div class="null" id="rateChart_null">
+                                    <img src="../../../imgs/columnNull.png" alt="">
+                                    <p>暂无数据a</p>
+                                </div>
+                                <!--图表内容-->
+                                <div id="RateChart"></div>
+                            </div>
+                             <div class="RateListBox">
+                                 <div id="errorRateList">
+                                    <div class="ListHeade">
+                                            <div class="col-xs-8 knowLedge">知识点</div>
+                                            <div class="col-xs-2 errorRates">错误率</div>
+                                            <div class="col-xs-2  wrongTimes" >错误次数</div>
+                                    </div>
+                                    <div class="loadingTips" id="rateList_loading" style="position: absolute;left:0px;top:0px;z-index:1"><div class="loadingImg" style="background-size:35% auto;"></div></div>
+                                    <div class="null" id="rateList_null" style="position:absolute;top:0px;left:0;width:100%;padding-top:100px;">
+                                        <img src="../../../imgs/columnNull.png" alt="">
+                                        <p>暂无数据</p>
+                                    </div>
+                                    <ul class="ListUl" id="rate_list">
+                                        <!-- <li class="ListLi">
+                                            <div class="col-xs-8 knowLedgeText">修辞手法</div>
+                                            <div class="col-xs-2 errorRatesText">100%</div>
+                                            <div class="col-xs-2 wrongTimesText">45</div>
+                                        </li> -->
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="../../../js/myJs.js"></script>
+<script src="../js/P_task.js"></script>
+<script src="../js/P_task_interface.js"></script>

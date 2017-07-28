@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'create-react-app' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData create-react-app
+8 silly fetchNamedPackageData create-react-app
+9 silly mapToRegistry name create-react-app
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npm.taobao.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'create-react-app',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'create-react-app',
+12 silly mapToRegistry   name: 'create-react-app',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npm.taobao.org/create-react-app
+14 verbose request uri https://registry.npm.taobao.org/create-react-app
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 14:54:15
+17 verbose request id e3e4bc5677508fee
+18 http request GET https://registry.npm.taobao.org/create-react-app
+19 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npm.taobao.org registry.npm.taobao.org:443
+20 info attempt registry request try #2 at 14:54:36
+21 http request GET https://registry.npm.taobao.org/create-react-app
+22 info retry will retry, error on last attempt: Error: read ECONNRESET
+23 info attempt registry request try #3 at 14:55:36
+24 http request GET https://registry.npm.taobao.org/create-react-app
+25 silly fetchPackageMetaData Error: read ECONNRESET
+25 silly fetchPackageMetaData     at exports._errnoException (util.js:1018:11)
+25 silly fetchPackageMetaData     at TLSWrap.onread (net.js:568:26)
+25 silly fetchPackageMetaData  error for create-react-app { Error: read ECONNRESET
+25 silly fetchPackageMetaData     at exports._errnoException (util.js:1018:11)
+25 silly fetchPackageMetaData     at TLSWrap.onread (net.js:568:26) code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+26 silly rollbackFailedOptional Starting
+27 silly rollbackFailedOptional Finishing
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: read ECONNRESET
+30 verbose stack     at exports._errnoException (util.js:1018:11)
+30 verbose stack     at TLSWrap.onread (net.js:568:26)
+31 verbose cwd E:\prac\react
+32 error Windows_NT 10.0.15063
+33 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "create-react-app"
+34 error node v6.11.0
+35 error npm  v3.10.10
+36 error code ECONNRESET
+37 error errno ECONNRESET
+38 error syscall read
+39 error network read ECONNRESET
+40 error network This is most likely not a problem with npm itself
+40 error network and is related to network connectivity.
+40 error network In most cases you are behind a proxy or have bad network settings.
+40 error network
+40 error network If you are behind a proxy, please make sure that the
+40 error network 'proxy' config is set properly.  See: 'npm help config'
+41 verbose exit [ 1, true ]
